@@ -1,0 +1,224 @@
+% 2_1_3 Одноодные системы уравнений
+
+Однородной системой двух уравнений второй степени с~двумя неизвестными
+называется система вида:
+
+\begin{numcases}{}
+a_{1}x^{2} + b_{1}xy + c_{1}y^{2} = d_{1}, \\ \label{eq_2_1_25}
+a_{2}x^{2} + b_{2}xy + c_{2}y^{2} = d_{2}. \label{eq_2_1_26}
+\end{numcases}
+
+Если ни одно из чисел $d_{1}$, $d_{2}$ не равно нулю,
+то умножив уравнение \eqref{eq_2_1_25} на $d_{2}$,
+а~уравнение \eqref{eq_2_1_26} "--- на $-d_{1}$,
+и~сложив, получим уравнение вида
+
+\begin{equation}\label{eq_2_1_27}
+Ax^{2} + Bxy + Cy^{2} = 0,
+\end{equation}
+
+\noindent
+являющееся следствием системы \{\eqref{eq_2_1_25}, \eqref{eq_2_1_26}\}.
+Согласно правилам преобразования систем \ref{lst_2_1_1_1}), \ref{lst_2_1_1_2}) система
+\{\eqref{eq_2_1_27}, \eqref{eq_2_1_26}\} равносильна исходной системе
+\{\eqref{eq_2_1_25}, \eqref{eq_2_1_26}\}.
+
+Таким образом, описанный метод <<уничтожения>> свободных членов
+позволяет свести систему \{\eqref{eq_2_1_25}, \eqref{eq_2_1_26}\}
+к~системе того же вида, у которой одно из чисел $d_{1}$, $d_{2}$ равно нулю
+(система \{\eqref{eq_2_1_27}, \eqref{eq_2_1_26}\}).
+
+Найдём те решения системы \{\eqref{eq_2_1_27}, \eqref{eq_2_1_26}\},
+для которых $y \ne 0$ (те решения, для которых $y = 0$,
+если они есть, находятся легко).
+При $y \ne 0$ уравнение \eqref{eq_2_1_27} равносильно уравнению
+
+\begin{equation}\label{eq_2_1_28}
+\displaystyle
+A\left(\frac{x}{y}\right)^{2} +
+B\left(\frac{x}{y}\right) +
+C
+= 0.
+\end{equation}
+
+Решив уравнение \eqref{eq_2_1_28} как квадратное относительно
+$\displaystyle \frac{x}{y}$ и~подставив найденное значение $\displaystyle \frac{x}{y}$
+в~уравнение \eqref{eq_2_1_26}, мы найдём решения системы
+\{\eqref{eq_2_1_25}, \eqref{eq_2_1_26}\} (те для которых $y \ne 0$). 
+
+\textbf{Задача 6.} Решить систему уравнений
+
+\begin{equation}\label{eq_2_1_29}
+\begin{cases}
+x^{2} - y^{2} = 5, \\
+x^{2} - xy + y^{2} = 7.
+\end{cases}
+\end{equation}
+
+Умножим первое уравнение на 7, второе на -5 и~сложим, получим
+
+\begin{equation}\label{eq_2_1_30}
+2x^{2} + 5xy - 12y^{2} = 0.
+\end{equation}
+
+Система \eqref{eq_2_1_29} равносильна системе
+
+\begin{equation}\label{eq_2_1_31}
+\begin{cases}
+x^{2} - y^{2} = 5, \\
+2x^{2} + 5xy - 12y^{2} = 0.
+\end{cases}
+\end{equation}
+
+Заметим, что $y \ne 0$ для решений системы \eqref{eq_2_1_31},
+так как если $y = 0$, то в~этом случае из \eqref{eq_2_1_30} получаем $x = 0$,
+но пара (0; 0) не удовлетворяет первому уравнению системы \eqref{eq_2_1_31}.
+Следовательно, $y \ne 0$, и~поэтому уравнение \eqref{eq_2_1_30} можно заменить уравнением,
+
+\begin{equation}\label{eq_2_1_32}
+\displaystyle
+2\left(\frac{x}{y}\right)^{2} +
+5\left(\frac{x}{y}\right) -
+12
+= 0,
+\end{equation}
+
+\noindent
+из которого получаем
+
+\begin{equation}\label{eq_2_1_33}
+\displaystyle \left(\frac{x}{y}\right)_{1} = -4;
+\quad
+\left(\frac{x}{y}\right)_{2} = \frac{3}{2}.
+\end{equation}
+
+Таким образом, системы \eqref{eq_2_1_31}, а,~значит, и~исходная система \eqref{eq_2_1_29}
+равносильны совокупности следующих двух систем:
+
+\begin{equation*}
+\begin{cases}
+x^{2} - y^{2} = 5, \\
+x = -4y,
+\end{cases}
+\quad
+\begin{cases}
+x^{2} - y^{2} = 5, \\
+\displaystyle x = \frac{3}{2}y,
+\end{cases}
+\end{equation*}
+
+Решив эти системы, найдём четыре решения исходной системы \eqref{eq_2_1_29}:
+
+\begin{equation*}
+\displaystyle
+\left(
+\frac{4}{\sqrt{3}}; -\frac{1}{\sqrt{3}}
+\right), \quad
+\left(
+\frac{4}{\sqrt{3}}; \frac{1}{\sqrt{3}}
+\right), \quad
+(-3; -2), \quad
+(3; 2).
+\end{equation*}
+
+Подобный способ решения применим и~для решения систем вида:
+
+\begin{equation}\label{eq_2_1_34}
+\begin{cases}
+f(x, y) = 0, \\
+g(x, y) = 0,
+\end{cases}
+\end{equation}
+
+\noindent
+где хотя бы она из функций $f$ или $g$, например $f$, является однородным многочленом
+относительно $x$ и~$y$ степени $n$, то есть:
+
+\begin{equation*}
+f(x, y) = a_{0}x^{n} + a_{1}x^{n-1}y + \dots + a_{n-1}xy^{n-1} + a_{n}y^{n}.
+\end{equation*}
+
+\textbf{Задача 7.} Решить систему уравнений
+
+\begin{equation}\label{eq_2_1_35}
+\begin{cases}
+x^{3} + 2x^{2}y - xy^{2} - 2y^{3} &= 0, \\
+x^{2} + y^{2} = 8.
+\end{cases}
+\end{equation}
+
+Заметим, что при $y = 0$ из первого уравнения следует $x = 0$,
+но пара (0; 0) не является решением системы \eqref{eq_2_1_35},
+так как не удовлетворяет второму уравнению этой системы.
+Итак, $y \ne 0$ и~следовательно, первое уравнение системы \eqref{eq_2_1_35}
+можно заменить на уравнение
+
+\begin{equation}\label{eq_2_1_36}
+\displaystyle
+\left(
+\frac{x}{y}
+\right)^{3} +
+2\left(
+\frac{x}{y}
+\right)^{2} -
+\frac{x}{y} -
+2 = 0.
+\end{equation}
+
+Обозначим $\displaystyle t = \frac{x}{y}$, получим уравнение относительно $t$:
+
+\begin{equation}\label{eq_2_1_37}
+t^{3} + 2t^{2} - t - 2 = 0.
+\end{equation}
+
+Преобразуем уравнение \eqref{eq_2_1_37}:
+
+\begin{gather*}
+t^{3} + 2t^{2} - t - 2 = 0, \\
+t(t^{2} - 1) + 2(t^{2} - 1 = 0, \\
+(t - 1)(t + 1)(t + 2) = 0
+\end{gather*}
+
+\noindent
+откуда получаем $t_{1} = 1$, $t_{2} = -1$, $t_{3} = -2$.
+Следовательно, уравнение \eqref{eq_2_1_36} имеет три решения:
+
+\begin{equation}\label{eq_2_1_38}
+\left(
+\displaystyle \frac{x}{y} = 1,
+\right)_{1} \quad
+\left(
+\displaystyle \frac{x}{y} = -1,
+\right)_{2} \quad
+\left(
+\displaystyle \frac{x}{y} = -2,
+\right)_{3}
+\end{equation}
+
+\noindent
+и~система \eqref{eq_2_1_35} равносильна совокупности трёх систем уравнений:
+
+\begin{equation*}
+\begin{cases}
+x = y, \\
+x^{2} + y^{2} = 8,
+\end{cases} \quad
+\begin{cases}
+x = -y, \\
+x^{2} + y^{2} = 8,
+\end{cases} \quad
+\begin{cases}
+x = -2y, \\
+x^{2} + y^{2} = 8,
+\end{cases}
+\end{equation*}
+
+Решив эти системы, найдём все 6~решений исходной системы \eqref{eq_2_1_35}:
+
+\begin{gather*}
+(-2; -2), (2; 2), (-2; 2), (2; -2), 
+\displaystyle
+\left( -4\sqrt{\frac{2}{5}}; 2\sqrt{\frac{2}{5}} \right),
+\left( 4\sqrt{\frac{2}{5}}; -2\sqrt{\frac{2}{5}} \right).
+\end{gather*}
+
