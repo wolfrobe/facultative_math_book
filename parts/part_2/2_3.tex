@@ -1,0 +1,681 @@
+% 2_3
+
+В~этой главе на конкретных примерах мы рассмотрим некоторые приёмы,
+используемые при решении тригонометрических систем уравнений.
+
+Вначале обратим внимание на одну особенность тригонометрических систем,
+связанную с~появлением в~их решениях параметров.
+
+\textbf{Задача 1.}\label{ex:2_3_1} Решить систему уравнений
+
+\begin{equation}\label{eq:2_3_1}
+\begin{cases}
+\sin (x + y) = 0, \\
+\sin (x - y) = 0.
+\end{cases}
+\end{equation}
+
+Из первого уравнения системы \eqref{eq:2_3_1}, получаем
+
+\begin{equation}\label{eq:2_3_2}
+x + y = \pi n, \; n \in \mathbb{Z},
+\end{equation}
+
+\noindent
+из второго "---
+
+\begin{equation}\label{eq:2_3_3}
+x - y = \pi m, \; m \in \mathbb{Z},
+\end{equation}
+
+\noindent
+Система \eqref{eq:2_3_1} равносильна совокупности систем
+
+\begin{equation}\label{eq:2_3_4}
+\begin{cases}
+x + y = \pi m, \\
+x - y = \pi m,
+\end{cases}
+\end{equation}
+
+\noindent
+где $n$ и~$m$ произвольные целые числа, то есть $n, m \in \mathbb{Z}$.
+Решая систему \eqref{eq:2_3_4} находим: 
+$\displaystyle x = \pi \left( \frac{n + m}{2} \right)$,
+$\displaystyle y = \pi \left( \frac{n - m}{2} \right)$.
+
+Ответ:
+$\displaystyle \left( \frac{\pi}{2}(n + m);
+\frac{\pi}{2}(n - m) \right), \; n, m \in \mathbb{Z}$.
+
+Было бы ошибкой при рассмотрении системы \eqref{eq:2_3_1} вместо уравнений
+\eqref{eq:2_3_2} и~\eqref{eq:2_3_3} рассматривать уравнение \eqref{eq:2_3_2} и
+
+\begin{equation}\label{eq:2_3_3-1}
+x - y = \pi n, \; n \in \mathbb{Z},
+\end{equation}
+
+\noindent
+так как в~этом случае мы получили бы систему
+
+\begin{equation}\label{eq:2_3_5}
+\begin{cases}
+x + y = \pi n, \\
+x - y = \pi n,
+\end{cases}
+\end{equation}
+
+\noindent
+где $n \in \mathbb{Z}$. Решение системы \eqref{eq:2_3_5} имеет вид
+$(\pi n; 0), n \in \mathbb{Z}$ и~они не исчерпывают всех решений системы
+\eqref{eq:2_3_1}. Так, например пара чисел $(2\pi; \pi)$, являющаяся
+решением системы \eqref{eq:2_3_1}, не может быть записана в~виде $(\pi n; 0)$
+ни при каком $z \in \mathbb{Z}$.
+
+Дело в~том, что параметры $n$ и~$m$, появляются в~\eqref{eq:2_3_2}
+и~\eqref{eq:2_3_3} при решении разных уравнений системы, независимы
+друг от друга и~поэтому должны обозначаться разными символами.
+Обозначение же этих параметров одним и~тем же символом приводит к~неверному
+заключению, что эти параметры одновременно принимают одинаковые значения.
+Это и нашло отражение в~неверном ответе $(\pi n; 0), n \in \mathbb{Z}$.
+
+Приступая к~решению системы тригонометрических уравнений, целесообразно
+вначале проверить, нельзя ли непосредственно из какого-либо уравнения системы
+выразить одно из уравнений через другое.
+
+\textbf{Задача 2.}\label{ex:2_3_2} (МФТИ, 1983). Решить систему уравнений
+
+\begin{numcases}{}
+\tg x + \tg y = 1 - \tg x \cdot \tg y, \label{eq:2_3_6} \\
+\sin 2y - \sqrt{2} \sin x = 1. \label{eq:2_3_7}
+\end{numcases}
+
+Исходная система имеет смысл лишь в~случае, когда определены функции
+$\tg x$ и~$\tg y$ т.~е.\ выполнены условия
+
+\begin{equation}\label{eq:2_3_8}
+\cos x \ne 0, \quad \cos y \ne 0.
+\end{equation}
+ 
+Рассмотрим уравнение \eqref{eq:2_3_6}. Естественно было бы разделить обе его
+части на $1 - \tg x \cdot \tg y$ и~воспользоваться формулой тангенса суммы.
+Тогда уравнение \eqref{eq:2_3_6} можно было бы переписать в~виде
+
+\begin{equation}\label{eq:2_3_9}
+\tg (x + y) = 1;
+\end{equation}
+
+\noindent
+но при этом мы можем потерять те решения системы
+{\eqref{eq:2_3_6}, \eqref{eq:2_3_7}}, для которых
+
+\begin{equation}\label{eq:2_3_10}
+1 - \tg x \cdot \tg y = 0.
+\end{equation}
+
+\noindent
+Однако легко убедиться в~том, что системы
+{\eqref{eq:2_3_6}, \eqref{eq:2_3_7}, \eqref{eq:2_3_10}}, не имеет решений.
+В~самом деле, если бы существовали решения этой системы, то из уравнения
+\eqref{eq:2_3_6} следовало бы, что $\tg x + \tg y = 0$.
+но тогда уравнение \eqref{eq:2_3_10} приняло бы вид $1 + \tg^{2} y = 0$,
+и~следовательно, оно бы решений не имело.
+
+Таким образом, исходная система при условии \eqref{eq:2_3_6} равносильна системе
+{\eqref{eq:2_3_7}, \eqref{eq:2_3_9}}.
+
+Из уравнения \eqref{eq:2_3_9} находим $\displaystyle x + y = \frac{\pi}{4} + \pi n$,
+т.~е.\
+
+\begin{equation}\label{eq:2_3_11}
+\displaystyle y = \frac{\pi}{4} + \pi n - x, \; n \in \mathbb{Z}.
+\end{equation}
+
+\noindent
+Теперь найденное для $y$: выражение подставим в~уравнение \eqref{eq:2_3_7}
+исходной системы:
+
+\begin{equation*}
+\displaystyle \sin \left( \frac{\pi}{2} - 2x + 2\pi n \right) -
+\sqrt{2}\sin x = 1.
+\end{equation*}
+
+\noindent
+Преобразуем полученное уравнение
+
+\begin{gather*}
+\cos 2x - \sqrt{2}\sin x = 1, \\
+\cos^{2} x - \sin^{2} x - \sqrt{2}\sin x = \cos^{2} x + \sin^{2} x, \\
+2\sin^{2} x + \sqrt{2}\sin x = 0, \\
+\sin x \left( 2\sin x + \sqrt{2} \right ) = 0,
+\end{gather*}
+
+\noindent
+откуда
+
+\begin{align*}
+\text{а)} &\sin x = 0, \; x = \pi m, \; m \in \mathbb{Z}, \\
+\displaystyle \text{б)} &\sin x = -\frac{\sqrt{2}}{2}, \;
+x = (-1) ^{x + 1}\frac{\pi}{4} + \pi k, \; k \in \mathbb{Z}. \\ 
+\end{align*}
+
+По формуле \eqref{eq:2_3_11} определяем соответствующие значения $y$.
+Для серии а)
+
+\begin{equation}\label{eq:2_3_12}
+\displaystyle y =  \frac{\pi}{4} + \pi(n - m), \; n, m \in \mathbb{Z},
+\end{equation}
+
+\noindent
+для серии б)
+
+\begin{equation}\label{eq:2_3_13}
+\displaystyle y = \frac{\pi}{4} - (-1)^{k+1} \frac{\pi}{4} + \pi(n - k),
+\; n, k \in \mathbb{Z}.
+\end{equation}
+
+Значения ($x$, $y$) из формул а), \eqref{eq:2_3_12} удовлетворяют условию
+\eqref{eq:2_3_8}. Для серии б), \eqref{eq:2_3_13} требуется дополнительное
+исследование. Для серии б) $\displaystyle |\cos x| = \frac{\sqrt{2}}{2}$,
+поэтому первое неравенство условия \eqref{eq:2_3_8} выполнено.
+Второе неравенство $\cos y \ne 0$ выполняется не всегда.
+
+Если $k$ "--- чётное число, т.е.\ $k = 2p$, где $p \in \mathbb{Z}$,
+то по формуле \eqref{eq:2_3_13} находим 
+$\displaystyle y = \frac{\pi}{2} + \pi(n - 2p)$.
+Для этих значений $y$ условие \eqref{eq:2_3_8} не выполняется.
+Если же $k$ "--- нечётное число, т.е.\ $k = 2p - 1$, где $p \in \mathbb{Z}$,
+то $y = \pi(n - 2p + 1)$ и~условие \eqref{eq:2_3_8} выполнено.
+Соответствующие значения $x$ находим по формуле
+б): $\displaystyle x = -\frac{3\pi}{4} + 2\pi p$.
+
+Ответ:
+\begin{equation*}
+\displaystyle \left( \pi m; \frac{\pi}{4} + \pi(n - m) \right),
+\displaystyle \left( -\frac{3\pi}{4} + 2\pi p; \pi(n - 2p +1) \right), \;
+m, n, p \in \mathbb{Z}.
+\end{equation*}
+
+В~некоторых случаях с~помощью преобразований уравнений системы удаётся получить
+уравнения, содержащие лишь одну переменную или одну комбинацию переменных.
+
+\textbf{Задача 3.}\label{ex:2_3_3} Решить систему уравнений
+
+\begin{equation}\label{eq:2_3_14}
+\begin{cases}
+\displaystyle \sin x \cdot \cos y = -\frac{1}{2}, \\[10pt]
+\displaystyle \cos x \cdot \sin y = \frac{1}{2}.
+\end{cases}
+\end{equation}
+
+Сложив уравнения системы \eqref{eq:2_3_14}, а~затем вычтя из второго уравнения
+первое и~воспользовавшись формулой $\sin (a + b) = -\sin a \cos b + \cos a \sin b$,
+получим систему, равносильную системе \eqref{eq:2_3_14}:
+
+\begin{equation*} 
+\begin{cases}
+\sin (x + y) = 0, \\
+\sin (y - x) = 1,
+\end{cases}
+\end{equation*} 
+
+\noindent
+откуда последовательно находим
+
+\begin{align*}
+& \displaystyle x + y = \pi n, \quad y - x = \frac{\pi}{2} + 2\pi n, \\
+& \displaystyle x = \pi \left ( \frac{n}{2} - k - \frac{1}{4} \right ), \\
+& \displaystyle y = \pi \left ( \frac{n}{2} + k + \frac{1}{4} \right ), \;
+n, k \in \mathbb{Z}.
+\end{align*}
+
+Ответ:
+$\displaystyle
+\left(
+\pi \left(\frac{n}{2} - k - \frac{1}{4}\right);
+\pi \left(\frac{n}{2} + k + \frac{1}{4}\right)
+\right)$, $n, k \in \mathbb{Z}$.
+
+Так же, как систему \eqref{eq:2_3_14}, можно решить систему вида
+
+\begin{equation*}
+\begin{cases}
+\sin x \cdot \sin y = a, \\
+\cos x \cdot \cos y = b.
+\end{cases}
+\end{equation*}
+
+К~таким системам приводятся системы 
+
+\begin{equation*}
+\begin{cases}
+\sin x \cdot \sin y = a, \\
+\tg x \cdot \tg y = b, \\
+\end{cases}
+\end{equation*}
+
+\begin{equation*}
+\begin{cases}
+\sin x \cdot \cos y = a, \\
+\tg x \cdot \ctg y = b.
+\end{cases}
+\end{equation*}
+
+Иногда систему тригонометрических уравнений удаётся свести к~системе,
+содержащей только две тригонометрические функции. В~этом случае при
+решении системы можно применить метод введения новых неизвестных.
+
+\textbf{Задача 4.}\label{ex:2_3_4} Решить систему уравнений
+
+\begin{equation}\label{eq:2_3_15}
+\begin{cases}
+\cos x - \sin x = 1 + \cos y - \sin y, \\
+\displaystyle 3\sin 2x - 2\sin 2y = \frac{3}{4}.
+\end{cases}
+\end{equation}
+
+Воспользуемся тождеством
+
+\begin{equation*}
+(\sin x - \cos x)^{2} = 1 - \sin 2x
+\end{equation*}
+
+\noindent
+и~обозначим
+
+\begin{equation}\label{eq:2_3_16}
+\cos x - \sin x = u, \quad \cos y - \sin y = v;
+\end{equation}
+
+\noindent
+тогда
+
+\begin{equation*}
+\sin 2x = 1 - u^{2}, \quad \sin 2y = 1 - v^{2},
+\end{equation*}
+
+\noindent
+и~система \eqref{eq:2_3_15} сводится к~алгебраической системе
+
+\begin{equation}\label{eq:2_3_17}
+\begin{cases}
+u = 1 + v, \\
+\displaystyle 3u^{2} - 2v^{2} = \frac{1}{4}.
+\end{cases}
+\end{equation}
+
+Решая систему \eqref{eq:2_3_17} методом подстановки, получим два решения
+
+\begin{equation*}
+\displaystyle u_{1} = -\frac{9}{2}, \;
+\displaystyle v_{1} = -\frac{11}{2}, \; \text{и} \;
+\displaystyle u_{2} = \frac{1}{2}, \;
+\displaystyle u_{2} = -\frac{1}{2}.
+\end{equation*}
+
+Рассмотрим вначале значения $u_{1}$ и~$v_{1}$. 
+Возвращаясь к~исходным переменным, по формулам \eqref{eq:2_3_16} получаем:
+
+\begin{equation}\label{eq:2_3_18}
+\begin{cases}
+\displaystyle \cos x - \sin x = -\frac{9}{2}, \\
+\displaystyle \cos y - \sin y = -\frac{11}{2}.
+\end{cases}
+\end{equation}
+
+\noindent
+Преобразуем первое из уравнений системы \eqref{eq:2_3_18}, воспользовавшись
+методом введения дополнительного угла. Для этого умножим обе его части на
+$\displaystyle \frac{\sqrt{2}}{2}$, получим 
+$\displaystyle \frac{\sqrt{2}}{2} \cos x - \frac{\sqrt{2}}{2} \sin x = -\frac{9\sqrt{2}}{4}$.
+Левую часть этого уравнения можно записать в~виде
+$\displaystyle \cos \left( x + \frac{\pi}{4} \right)$, поэтому первое уравнение системы
+\eqref{eq:2_3_18} равносильно уравнению
+$\displaystyle \cos \left( x + \frac{\pi}{4} \right) = -\frac{9\sqrt{2}}{4}$,
+которое решений не имеет, ибо
+$\displaystyle \left | \left( x + \frac{\pi}{4} \right) \right | \leqslant 1$
+для всех $x$, в~то время как $\displaystyle \left | \frac{9\sqrt{2}}{4} \right | > 2$.
+Следовательно и~сама система \eqref{eq:2_3_18} решений не имеет.
+
+Рассмотрим теперь значения $u_{2}$ и~$v_{2}$. Вновь по формулам \eqref{eq:2_3_16}
+получим
+
+\begin{equation*}
+\begin{cases}
+\displaystyle \cos x - \sin x = \frac{1}{2}, \\[10pt]
+\displaystyle \cos y - \sin y = -\frac{1}{2}.
+\end{cases}
+\end{equation*}
+
+\noindent
+Преобразуем уравнения последней системы, воспользовавшись, как и~выше,
+методом введения дополнительного угла, получим равносильную систему:
+
+\begin{equation*}
+\begin{cases}
+\displaystyle \cos \left( x + \frac{\pi}{4} \right) = \frac{\sqrt{2}}{4}, \\[10pt]
+\displaystyle \cos \left( y + \frac{\pi}{4} \right) = - \frac{\sqrt{2}}{4},
+\end{cases}
+\end{equation*}
+
+\noindent
+из которой находим
+
+\begin{align*}
+& x + \frac{\pi}{4} = \pm \arccos \frac{\sqrt{2}}{4} + 2\pi n, \\[10pt]
+& y + \frac{\pi}{4} = \pm \arccos -\frac{\sqrt{2}}{4} + 2\pi m, \; n, m \in \mathbb{Z}.
+\end{align*}
+
+Ответ:
+\begin{align*}
+\displaystyle \left( 
+-\frac{\pi}{4} \pm \arccos \frac{\sqrt{2}}{4} + 2\pi n; \;
+-\frac{\pi}{4} - \arccos \left(-\frac{\sqrt{2}}{4}\right) + 2\pi m,
+\right), \\
+\displaystyle \left( 
+-\frac{\pi}{4} \pm \arccos \frac{\sqrt{2}}{4} + 2\pi n; \;
+-\frac{\pi}{4} + \arccos \left(-\frac{\sqrt{2}}{4}\right) + 2\pi m,
+\right), \\
+n, m \in \mathbb{Z}
+\end{align*}
+
+В~некоторых случаях систему удаётся привести к~виду
+
+\begin{equation}\label{eq:2_3_19}
+\begin{cases}
+\sin x = f(y), \\
+\cos x = g(y),
+\end{cases}
+\end{equation}
+
+\noindent
+откуда в~силу основного тригонометрического тождества
+$\sin^{2} x + \cos^{2} x = 1$ получаем уравнение
+$f^{2}(y) + g^{2}(u) = 1$, содержащее лишь одно неизвестное $y$.
+
+Если система приведена к~виду
+
+\begin{equation*}
+\begin{cases}
+\tg x = f(y), \\
+\ctg x = g(y),
+\end{cases}
+\end{equation*}
+
+\noindent
+то неизвестное $x$ исключается перемножением уравнений
+$\tg x \cdot \ctg x = 1$, откуда $f(y) \cdot g(y) = 1$.
+
+При таких способах решения необходимо внимательно следить за тем,
+чтобы не потерять решений и~не приобрести посторонние решения.
+
+\textbf{Задача 5.}\label{ex:2_3_5}(МФТИ, 1979). Решить систему уравнений.
+
+\begin{equation}\label{eq:2_3_20}
+\begin{cases}
+4 \sin x - 2 \sin y = 3, \\
+2 \cos x - \cos y = 0.
+\end{cases}
+\end{equation}
+
+Систему \eqref{eq:2_3_20} можно привести к~виду \eqref{eq:2_3_19}
+сделав это, получим равносильную систему
+
+\begin{equation}\label{eq:2_3_21}
+\begin{cases}
+\displaystyle \sin x = \frac{3}{4} + \frac{1}{2} \sin y, \\[10pt]
+\displaystyle \cos x = \frac{1}{2} \cdot \cos y.
+\end{cases}
+\end{equation}
+
+Возводя почленно уравнения системы \eqref{eq:2_3_21} в~квадрат
+и~складывая, получаем уравнение, являющееся следствием системы \eqref{eq:2_3_21}:
+
+\begin{gather}
+\displaystyle 1 = \frac{9}{16} + \frac{3}{4} \sin y +
+\frac{1}{4} \sin^{2} y + \frac{1}{4} \cos^{2} y, \notag \\
+\displaystyle \sin y = \frac{1}{4} \label{eq:2_3_22}
+\end{gather}
+
+\noindent
+откуда
+
+\begin{equation}\label{eq:2_3_23}
+y = (-1)^{n} \arcsin \frac{1}{4} + \pi n, \; n \in \mathbb{Z}.
+\end{equation}
+
+Из первого уравнения системы \eqref{eq:2_3_21} с~учётом \eqref{eq:2_3_22}
+находим 
+
+\begin{gather}
+\displaystyle \sin x = \frac{7}{8}, \notag \\
+x = (-1)^{m} \arcsin \frac{7}{8} + \pi m, \; m \in \mathbb{Z}.\label{eq:2_3_24}
+\end{gather}
+
+Поскольку при решении системы \eqref{eq:2_3_20} могли появиться посторонние решения
+(использовалась операция возведения в~квадрат), необходимо произвести отбор,
+подставив найденные значения \eqref{eq:2_3_23}, \eqref{eq:2_3_24} во второе
+уравнение этой системы.
+
+Легко видеть, что при чётных $m$ и~$n$ в~формулах \eqref{eq:2_3_23}
+и~\eqref{eq:2_3_24} соответствующие значения $\cos x$ и~$\cos y$ положительны,
+а~при нечётных $m$ и~$n$ эти значения отрицательны.
+С~другой стороны из тех же формул \eqref{eq:2_3_23} и~\eqref{eq:2_3_24} следует,
+что
+
+\begin{equation*}
+\displaystyle |\cos x| = \sqrt{1 - \sin^{2} x} = \frac{15}{8}, \quad
+\displaystyle |\cos y| = \frac{15}{4},
+\end{equation*}
+
+\noindent
+так что для выполнения второго уравнения системы \eqref{eq:2_3_21} требуется
+только, чтобы $\cos x$ и~$\cos y$ совпадали. Отсюда получаем
+
+\begin{equation}\label{eq:2_3_25}
+\begin{cases}
+\displaystyle x = \arcsin \frac{7}{8} + 2 \pi k, \\[10pt] 
+\displaystyle y = \arcsin \frac{1}{4} + 2 \pi l,
+\end{cases}
+\end{equation}
+
+\begin{equation}\label{eq:2_3_26}
+\begin{cases}
+\displaystyle x = -\arcsin \frac{7}{8} + 2(k + 1) \pi, \\[10pt]
+\displaystyle y = - \arcsin \frac{1}{4} + 2(l + 1) \pi, \; k, l \in \mathbb{Z}
+\end{cases}
+\end{equation}
+
+Обе полученные серии \eqref{eq:2_3_25}, \eqref{eq:2_3_26} можно объединить
+и~ответ записать в~следующем виде.
+
+Ответ:
+
+\begin{equation*}
+\displaystyle
+\left(
+(-1)^{p} \arcsin \frac{7}{8} + \pi p);
+(-1)^{p} \arcsin \frac{1}{4} + \pi (p + 2r),
+\right)
+\; p, r \in \mathbb{Z}.
+\end{equation*}
+
+При решении тригонометрических систем часто бывает непросто сделать первый шаг,
+найти <<ключ>> к~решению задачи.
+Какие-то общие рекомендации здесь дать нельзя.
+Можно лишь посоветовать стараться применять такие преобразования уравнений системы,
+которые приводят к~появлению тригонометрических функций одного аргумента или
+хотя бы не увеличивают число функций с~разными аргументами.
+
+\textbf{Задача 6.}\label{ex:2_3_6} (МФТИ, 1982). Решить систему уравнений
+
+\begin{equation}\label{eq:2_3_27}
+\begin{cases}
+3 \cos 3x = \sin (x + 2y), \\
+3 \sin (2x + y) = - \cos 3y.
+\end{cases}
+\end{equation}
+
+Если выразить члены уравнений через синусы и~косинусы аргументов $x$ и~$y$,
+то получится довольно сложная система. Поэтому следует избрать другой способ
+решения.
+
+Заметим, что сумма аргументов косинусов в~уравнениях системы, равная $3x + 3y$,
+совпадает с~суммой аргументов синусов. Учитывая это, перемножим уравнения системы
+\eqref{eq:2_3_27} <<крест-накрест>>, т.е.\ умножим левую часть одного уравнения
+на правую часть другого. Получим уравнение
+
+\begin{equation}\label{eq:2_3_28}
+-\cos 3x \cos 3y = \sin (x + 2y) \sin (2x + y),
+\end{equation}
+
+\noindent
+являющееся следствием системы \eqref{eq:2_3_27}.
+
+Заменим в~уравнении \eqref{eq:2_3_28} произведения тригонометрических функций
+соответствующими суммами (разностями); получим
+
+\begin{gather*}
+\displaystyle -\frac{1}{2}
+\left(
+\cos (3x + 3y) + \cos (3x - 3y)
+\right) =
+\frac{1}{2} 
+\left(
+\cos (x - y) - \cos (3x + 3y)
+\right) \quad \text{или} \\
+\cos (x - y) + \cos (3x - 3y) = 0.
+\end{gather*}
+
+\noindent
+Выразим сумму косинусов через произведение
+
+\begin{equation}\label{eq:2_3_29}
+2 \cos (x - y) \cdot \cos (2x - 2y) = 0.
+\end{equation}
+
+\noindent
+Уравнение \eqref{eq:2_3_29} распадается на два уравнения
+
+\begin{gather}
+\cos (x - y) = 0, \label{eq:2_3_30} \\
+\cos (2x - 2y) = 0. \label{eq:2_3_31}
+\end{gather}
+
+\noindent
+Следовательно система \eqref{eq:2_3_27} равносильна совокупности систем
+\{\eqref{eq:2_3_27}, \eqref{eq:2_3_30}\} и~\{\eqref{eq:2_3_27}, \eqref{eq:2_3_31}\}.
+
+\begin{itemize} 
+\item[а)] Рассмотрим систему \{\eqref{eq:2_3_27}, \eqref{eq:2_3_30}\}.
+Из уравнения \eqref{eq:2_3_30} следует, что
+\begin{equation}\label{eq:2_3_32}
+\displaystyle x = y + \frac{\pi}{2} + \pi n.
+\end{equation}
+
+\noindent
+Подставляя $x$ из \eqref{eq:2_3_25} в~систему \eqref{eq:2_3_27},
+(в~оба уравнения сразу, для того, чтобы потом не делать проверку), получим
+
+\begin{equation*}
+\begin{cases}
+\displaystyle 3 \cos \left( 3y + \frac{3\pi}{2} + 3 \pi n \right ) = 
+\sin \left( 3y + \frac{\pi}{2} + \pi n \right), \\
+3 \sin \left( 3y + \pi + 2 \pi n \right ) = -\cos 3y.
+\end{cases}
+\end{equation*}
+
+\noindent
+Оба уравнения приводятся к~виду
+$3 \sin 3y = \cos 3y$, отсюда $\displaystyle \tg 3y = \frac{1}{3}$,
+
+\begin{equation}\label{eq:2_3_33}
+\displaystyle y = \frac{1}{3} \arctg \frac{1}{3} + \frac{\pi m}{3}, \;
+m \in \mathbb{Z}.
+\end{equation}
+
+\noindent
+Из \eqref{eq:2_3_32} находим
+
+\begin{equation}\label{eq:2_3_34}
+\displaystyle x = \frac{1}{3} \arctg \frac{1}{3} + \frac{\pi}{2} + \frac{\pi m}{3} + \pi n, \;
+m, n \in \mathbb{Z}.
+\end{equation}
+
+\item[б)] Рассмотрим теперь систему \{\eqref{eq:2_3_27}, \eqref{eq:2_3_31}\}.
+Из уравнения \eqref{eq:2_3_31} находим
+
+\begin{equation}\label{eq:2_3_35}
+\displaystyle x = y + \frac{\pi}{4} + \frac{\pi k}{2}, \; k \in \mathbb{Z}.
+\end{equation}
+
+\noindent
+Подставляя это значение в~систему \eqref{eq:2_3_27}, получаем:
+
+\begin{equation}\label{eq:2_3_36}
+\begin{cases}
+\displaystyle 3 \cos
+\left(
+3y + \frac{3\pi}{4} + \frac{3 \pi k}{2}
+\right) =
+\sin 
+\left(
+3y + \frac{\pi}{4} + \frac{\pi k}{2} 
+\right), \\[10pt]
+\displaystyle 3 \sin
+\left(
+3y + \frac{\pi}{2} + \pi k 
+\right) =
+-\cos 3y.
+\end{cases}
+\end{equation}
+
+\noindent
+Далее воспользуемся формулами приведения. Из второго уравнения системы \eqref{eq:2_3_36}
+следует, что $\cos 3y = 0$, т.е.\
+
+\begin{equation}\label{eq:2_3_37}
+\displaystyle y = \frac{\pi}{6} + \frac{\pi p}{3}, \; p \in \mathbb{Z}.
+\end{equation}
+
+\noindent
+Подставляя это значение в~первое уравнение, получаем
+
+\begin{equation*}
+3 \cos 
+\left(
+\pi n + \frac{\pi}{2} + \frac{3 \pi}{4} + \frac{3 \pi k}{2}
+\right) = 
+\sin
+\left(
+\pi p + \frac{3 \pi}{4} + \frac{\pi k}{2} 
+\right),
+\end{equation*}
+
+\noindent
+откуда
+
+\begin{gather*}
+\displaystyle 3(-1)^{p} \cos
+\left(
+\frac{\pi}{2} + \left( \frac{3\pi}{4} + \frac{\pi}{2} + \pi k
+\right)\right) =
+(-1)^{p} \sin \left( \frac{3\pi}{4} + \frac{\pi k}{2} \right), \\
+\displaystyle -3 \sin \left( \frac{3\pi}{4} + \frac{\pi k}{2} + \pi k \right) =
+\sin \left( \frac{3\pi}{4} + \frac{\pi k}{2} \right), \\
+\displaystyle \left( 3(-1)^{k} + 1 \right) \sin \left( \frac{3 \pi}{4} + \frac{\pi k}{2} \right) = 0.
+\end{gather*}
+
+\noindent
+Последнее равенство не выполняется ни при каких $k \in \mathbb{Z}$, поэтому
+система \eqref{eq:2_3_36} несовместна, и~в~случае б) решений нет.
+
+Ответ:
+\begin{equation*}
+\displaystyle \left(
+\frac{1}{3} \arctg \frac{1}{3} + \frac{1}{2} + \frac{\pi}{2} + \frac{\pi m}{3} + \pi n; \;
+\frac{1}{3} \arctg \frac{1}{3} + \frac{\pi m}{3}
+\right), \;
+n, m \in \mathbb{Z}
+\end{equation*}
+\end{itemize} 
