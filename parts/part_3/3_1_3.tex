@@ -1,0 +1,210 @@
+% 3_1_3
+% subsubsection{Определение предела последовательности.}
+
+Рассмотрим числовую последовательность $\{x_{n}\}$,
+где $\displaystyle x_{n} = 1 + \frac{(-1)^{n-1}}{n}$.
+Будем изображать члены этой последовательности точками на числовой прямой (рис.\ \ref{fig:3_1_1})
+
+\begin{figure}\label{fig:3_1_1}
+% рис 1 стр 109
+\end{figure}
+
+\noindent
+Заметим, что расстояние от точки $x_{n}$ до точки 1, равное
+
+\begin{equation*}
+\displaystyle |x_{n} - 1| = \left| \frac{(-1)^{n-1}}{n}\right| = \frac{a}{n}
+\end{equation*}
+
+\noindent
+с~ростом $n$ становится всё меньше и меньше.
+Для всех членов последовательности, начиная с~члена, имеющего номер 101,
+абсолютная величина разности $x_{n} - 1$ меньше 0,01.
+Если $n \geqslant 1001$, то $\displaystyle |x_{n} - 1| < \frac{1}{1000}$.
+
+Зададим произвольное положительное число $\varepsilon$ и~выберем натуральное число
+$\mathbb{N}$ такое, чтобы выполнялось неравенство $\displaystyle \frac{1}{N} < \varepsilon$,
+которое равносильно следующему $\displaystyle  N > \frac{1}{\varepsilon}$.
+В~качестве $N$ можно взять номер $\displaystyle \left[ \frac{1}{\varepsilon} \right] + 1$,
+где $[\alpha]$ "--- целая часть числа $\alpha$, т.е.\ наименьшее целое число,
+не превосходящее $[\alpha]$. Тогда, если $n \geqslant N$, то
+$\displaystyle |x_{n} - a| < \frac{1}{n} \leqslant \frac{1}{N} < \varepsilon$.
+Таким образом, для любого $\varepsilon > 0$ можно указать номер $N$ такой,
+что для всех $n \geqslant N$ выполняется неравенство $|x_{n} - a| < \varepsilon$.
+Заметим, что $N = N_{\varepsilon}$, т.е.\ $N$ зависит, вообще говоря, от $\varepsilon$.
+В~этом случае говорят, что число 1 является пределом последовательности $\{x_{n}\}$,
+где $\displaystyle x_{n} = 1 + \frac{(-1)^{n}}{n}$,
+и~пишут $\displaystyle \lim_{n \to \infty} x_{n} = 1$ или $x_{n} \to 1$ при $n \to \infty$.
+
+\begin{Def} Число $a$ называется пределом последовательности $\{x_{n}\}$,
+если для каждого $\varepsilon > 0$ существует такой номер $N_{\varepsilon}$,
+что для всех $n \geqslant N_{\varepsilon}$ выполняется неравенство
+\end{Def}
+
+\begin{equation}\label{eq:3_1_2}
+|x_{n} - a| < \varepsilon.
+\end{equation}
+
+\noindent
+Если $a$ "--- предел последовательности $\{ x_{n} \}$, то пишут
+
+\begin{equation*}
+\lim_{n \to \infty} x_{n} = a \quad \text{или} \quad x_{n} \to a \quad \text{при} \quad n \to \infty.
+\end{equation*}
+
+\noindent
+Заметим, что неравенство \eqref{eq:3_1_2} равносильно неравенству
+$-\varepsilon < x_{n} - a < \varepsilon$, а~также неравенству
+
+\begin{equation}\label{eq:3_1_3}
+a - \varepsilon < x_{n} < a + \varepsilon.
+\end{equation}
+
+Условимся интервал $(a - \varepsilon, a + \varepsilon)$ называть $\varepsilon$-окрестностью
+точки $a$ (рис.\ \ref{fig:3_1_2})
+
+\begin{figure}\label{fig:3_1_2}
+% рис 2 стр 110
+\end{figure}
+
+\noindent
+и~обозначить $U_{\varepsilon}(a)$, т.е.\ $U_{\varepsilon} = (a - \varepsilon, a + \varepsilon)$.
+
+Пусть $a$ "--- предел последовательности $\{ x_{n} \}$, тогда при
+$n \geqslant N_{\varepsilon}$ выполняется неравенство \eqref{eq:3_1_3}, т.е.\
+
+\begin{equation*}
+x_{n} \in U_{\varepsilon}(a) \; \text{при} \; n \geqslant N_{\varepsilon}.
+\end{equation*}
+
+Это означает, что все члены последовательности $\{x_{n}\}$, начиная с~члена
+$x_{N_{\varepsilon}}$ принадлежат $\varepsilon$-окрестности точки $a$,
+так что вне этой окрестности либо нет ни одного члена последовательности,
+либо содержится конечное число её членов.
+
+Последовательность, имеющую предел, называют сходящейся, а~последовательность,
+которая не является сходящейся, называют расходящейся. Иначе говоря,
+последовательность называют расходящейся, если никакое число не является её пределом.
+
+Из определения предела последовательности следует, что последовательность $\{x_{n}\}$
+имеет предел, равный $a$, тогда и только тогда, когда последовательность $\{x_{n}-a\}$
+имеет предел, равный нулю.
+
+\textbf{Задача 1.}\label{ex:3_1_1}
+Пользуясь определением, доказать, что последовательность $\{x_{n}\}$ имеет предел
+и~найти его, если:
+
+\begin{enumerate}
+\item\label{ex:3_1_1_1} $\displaystyle x_{n} = \frac{1}{\sqrt[3]{n}}$;
+\item\label{ex:3_1_1_2} $x_{n} = aq^{n}$, где $|q| <1$, $a > 0$;
+\item\label{ex:3_1_1_3} $x_{n} = 1 + q + \dots + q^{n-1}$, где $|q| < 1$;
+\item\label{ex:3_1_1_4} $x_{n} = \sqrt{n+1} - \sqrt{n}$;
+\item\label{ex:3_1_1_5} 
+$\displaystyle x_{n} = \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n+1)}$.
+\end{enumerate}
+
+Решения:
+\begin{enumerate}
+
+\item Неравенство $\displaystyle |x_{n}| = \frac{1}{\sqrt[3]{n}} < \varepsilon$,
+где $\varepsilon > 0$, равносильно каждому из неравенств
+$\displaystyle \frac{1}{n} < \varepsilon$, $\displaystyle n > \frac{1}{\varepsilon^{2}}$.
+Поэтому при $n \geqslant N_{\varepsilon}$,
+где $\displaystyle N_{\varepsilon} = \left[ \frac{1}{\varepsilon^{3}} \right] + 1$,
+справедливо неравенство $|x_{n}| < \varepsilon$.
+Это означает, что $\displaystyle \lim_{n \to \infty} x_{n} = 0$.
+
+\item Если $q = 0$, то $x_{n} = 0$ для всех
+$n \in \mathbb{N}$ и~$\displaystyle \lim_{n \to \infty} x_{n} = 0$. Пусть $q \ne 0$.
+Обозначим $\displaystyle r = \frac{1}{|q|}$. Так как $|q| < 1$, то $r >1$
+и~поэтому $r = 1 + \alpha$, где $\alpha > 0$. Отсюда следует, что
+$\displaystyle \left| \frac{1}{q} \right|^{n} = r^{n} = (1 + \alpha)^{n} > \alpha n$
+(см.\ п.\ 2, г). \\
+Следовательно, $\displaystyle |x_{n}| = a|q|^{n} < \frac{a}{\alpha n}$.
+Так как неравенство $\displaystyle \frac{a}{\alpha n} < \varepsilon$,
+равносильное неравенству $\displaystyle n > \frac{a}{\alpha \varepsilon}$,
+выполняется при $n \geqslant N_{\varepsilon}$,
+где $\displaystyle N_{\varepsilon} = \left[ \frac{a}{\alpha \varepsilon} \right] + 1$,
+то при всех $n \geqslant N_{\varepsilon}$ справедливо неравенство $|x_{n}| < \varepsilon$,
+т.е.\ $\displaystyle \lim_{n \to \infty} x_{n} = 0$.
+
+\item Применяя формулу суммы $n$ первых членов геометрической прогрессии, получаем
+
+\begin{equation*}
+\displaystyle x_{n} = 1 + q + \dots + q^{n-1} =
+\frac{1 - q^{n}}{1 - q} =
+\frac{1}{1 - q} - \frac{q^{n}}{1 - q},
+\end{equation*}
+
+\noindent
+откуда $|x_{n} - a| = a|q|^{n}$, где $\displaystyle a = \frac{1}{1 - q}$.
+Так как $a|q|^{n} \to 0$ при $n \to \infty$ по доказанному выше,
+то $x_{n} \to a$ при $n \to \infty$,
+т.е.\ $\displaystyle \lim_{n \to \infty} \frac{1}{1 - q}$.
+Тем самым доказана формула суммы бесконечно убывающей геометрической прогрессии
+
+\begin{equation*}
+\displaystyle 1 + q + q^{2} + \dots + q^{n} + \dots = \frac{1}{1 - q}, \;
+|q| < 1.
+\end{equation*}
+
+\item Умножив и разделив $x_{n}$ на сумму $\sqrt{n + 1} + \sqrt{n}$,
+получим
+
+\begin{equation*}
+\displaystyle x_{n} =
+\frac{\left( \sqrt{n+1} \right)^{2}- \left( \sqrt{2} \right)^{2}}{\sqrt{n+1} + \sqrt{n}} =
+\frac{1}{\sqrt{n+1} + \sqrt{n}},
+\end{equation*}
+
+\noindent
+откуда $\displaystyle |x_{n}| < \frac{1}{2\sqrt{n}}$.
+
+Так как неравенство $\displaystyle \frac{1}{2\sqrt{n}} < \varepsilon$,равносильное
+каждому из неравенств
+$\displaystyle \frac{1}{4n} < \varepsilon^{2}$, 
+$\displaystyle n > \frac{1}{4\varepsilon^{2}}$,
+выполняется при $n \geqslant N_{\varepsilon}$,
+где $\displaystyle N_{\varepsilon} = \left[ \frac{1}{4\varepsilon^{2}} \right]$,
+то неравенство $|x_{n}| < \varepsilon$ справедливо при $n \geqslant N_{\varepsilon}$.
+Следовательно, $\displaystyle \lim_{n \to \infty} x_{n} = 0$.
+
+\item Используя равенство
+$\displaystyle \frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1}$,
+получаем
+
+\begin{multline*}
+\displaystyle
+x_{n} =
+\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n+1)} = \\
+= 1 - \frac{1}{2} + \frac{1}{2} - \frac{1}{3} + \dots + \frac{1}{n} - \frac{1}{n+1} = \\
+= 1 - \frac{1}{n+1},
+\end{multline*}
+
+\noindent
+откуда находим $\displaystyle \lim_{n \to \infty} x_{n} = 1$.
+
+\end{enumerate}
+
+\textbf{Задача 2.}\label{ex:3_1_2}
+Доказать, что последовательность $\{x_{n}\}$, где $x_{n} = (-1)^{n}$, является расходящейся.
+
+На числовой оси члены данной последовательности изображаются точками -1 и~1,
+причём $x_{2k} = 1$, $x_{2k-1} = -1$, $k \in \mathbb{N}$ (рис.\ \ref{fig:3_1_3}).
+
+\begin{figure}\label{fig:3_1_3}
+% рис 3 стр 113
+\end{figure}
+
+Любое число $a$, где $a \ne \pm 1$, не может быть пределом последовательности $\{x_{n}\}$.
+В~самом деле, если $a \ne 1$ и~$a \ne -1$, то $\varepsilon$ "--- окрестность точки $a$,
+где $\varepsilon$ "--- наименьшее из чисел $|a + 1|$ и~$|a - 1|$, не содержит
+ни одного члена последовательности. Поэтому число $a(|a| \ne 1)$ не является
+пределом последовательности.
+
+Число $a = 1$ также не является пределом последовательности $\{x_{n}\}$,
+так как существует число $\displaystyle \varepsilon = \frac{1}{2}$ такое,
+что вне $\varepsilon$-окрестности точки $a = 1$ содержится бесконечное число 
+членов последовательности (все члены с~нечётными номерами).
+Аналогично доказывается, что число $a = -1$ не является переделом последовательности.
+
