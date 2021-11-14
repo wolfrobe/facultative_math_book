@@ -1,0 +1,103 @@
+% 3_1_2
+%\subsubsection{Свойства действительных чисел}
+
+При вычислении пределов последовательностей и~пределов функций используется
+перечисленные ниже свойства действительных чисел.
+
+\begin{enumerate}
+
+\item\label{lst:3_1_2_1} Свойства связанные с неравенствами.
+
+\begin{enumerate}
+\item Если $a > b$ и~$b > c$, то $a > c$.
+\item Если $a > b$, то $a + c > b + c$, при любом  $c$.
+\item Если $a > b$ и~$c > 0$, то $ac > bc$, а если $a > b$ и~$c < 0$, то $ac < bc$.
+\item Если $a > b$ и~$c > d$, то $a + c > b + d$.
+\item Если $a > b > 0$ и~$c > d > 0$, то $ac > bd$.
+\item Если $a > b$, то $a^{2n+1} > b^{2n+1}$, при любом  $n \in \mathbb{N}$.
+\item Если $a > b \geqslant 0$, то $a^{n} > b^{n}$, при любом  $n \in \mathbb{N}$.
+\item Если $a > b > 0$, то $\displaystyle \frac{1}{a} < \frac{1}{b}$.
+\end{enumerate}
+
+\item\label{lst:3_1_2_2} Свойства, связанные с понятием модуля
+\begin{enumerate}
+\item $|-a| = |a|$, $|ab| = |a| \cdot |b|$,
+$\displaystyle \left| \frac{a}{b} \right| = \frac{|a|}{|b|}$ при $b \ne 0$.
+\item $\left||a| - |b|\right| \leqslant |a \pm b| \leqslant |a| + |b|$.
+\item Неравенство $|x - a| < \delta$, где $\delta > 0$, равносильно
+двойному неравенству $a - \delta < x < a + \delta$.
+\item Неравенство $|x - a| > \delta$, где $\delta > 0$, выполняется при $x < a - \delta$
+и~при $x > a + \delta$.
+\end{enumerate}
+
+\item\label{lst:3_1_2_3} Свойства, связанные с~понятием арифметического корня.\\
+Напомним, что число $\varepsilon \geqslant 0$ называется арифметическим корнем степени
+$m \; (m \geqslant 2, m \in \mathbb{N})$ из числа $a$, если $\varepsilon^{n} = a$.
+
+В курсе высшей математики доказывается, что для любого $m \in \mathbb{N} (m \geqslant 2)$
+существует единственный арифметический корень степени $m$ из положительного числа $a$
+он обозначается $\sqrt[m]{a}$ или $a^{\frac{1}{m}}$.
+
+Согласно определению, запись $\varepsilon = \sqrt[m]{a}$, где $a > 0$, означает,
+что $\varepsilon > 0$ и~$\varepsilon^{m} = \left( \sqrt[m]{a} \right)^{m} = a$.
+Если $a > 0$ и~$\displaystyle r = \frac{n}{m}$, где $n \in \mathbb{Z}, m \in \mathbb{N}$,
+то по определению
+
+\begin{equation*}
+a^{r} = \left( \sqrt[m]{a} \right)^{n} = \left( a^{\frac{1}{m}} \right)^{n}.
+\end{equation*}
+
+\noindent
+Этой формулой определяется рациональная степень числа $a > 0$.
+
+Пусть $r, r_{1}, r_{2}$ "--- рациональные числа, $a > 0$.
+Тогда справедливы следующие свойства рациональной степени:
+
+\begin{enumerate}
+\item $a^{r} > 1$ при $a > 1$, $r > 0$;
+\item $a^{r_{1}} \cdot a^{r_{2}} = a^{r_{1}+r_{2}}$;
+\item $\left( a^{r_{1}} \right)^{r_{2}} = a^{r_{1}r_{2}}$;
+\item $a^{r_{1}} > a^{r_{2}} > 0$ при $r_{1} > r_{2}$, $a > 1$.
+\end{enumerate}
+
+Отметим ещё, что если $b > 0$, $n \in \mathbb{N}$, то неравенство $a > b$
+справедливо тогда и~только тогда, когда имеет место неравенство
+$a^{\frac{1}{n}} > b^{\frac{1}{n}}$, т.е.\ неравенства $a > b$
+и~$a^{\frac{1}{n}} > b^{\frac{1}{n}}$ при $b > 0$ равносильны.
+
+\item\label{lst:3_1_2_4}  Свойства, связанные с~формулой бинома Ньютона.
+Если $a$, $b$ "--- произвольные вещественные числа, $n \in \mathbb{N}$,
+то справедлива формула бинома Ньютона
+
+\begin{equation}\label{eq:3_1_1}
+(a+ + b)^{n} =
+C_{n}^{0}a^{n} + C_{n}^{1}a^{n-1}b + \dots +
+C_{n}^{k}a^{n-k}b^{k} + \dots +
+C_{n}^{n}b^{n},
+\end{equation}
+
+\noindent
+где $C_{n}^{1} = 1$,
+$\displaystyle C_{n}^{k} = \frac{n(n-1) \dots (n - (k-1))}{K!}$,
+$1 \leqslant k \leqslant n$,
+$K! = 1 \cdot 2 \dots K$.
+
+\noindent
+Формула \eqref{eq:3_1_1} доказывается методом математической индукции.
+Из формулы \eqref{eq:3_1_1} следует, что если $x > 0$, то
+
+\begin{equation*}
+(1 + x)^{n} > 1 + nx, \;
+(1 + x)^{n} > C_{n}^{K}x^{K}, \;
+1 \leqslant K \leqslant n.
+\end{equation*}
+
+\noindent
+В~частности, при любом $n \in \mathbb{N}$ и~при $x > 0$ справедливы неравенства
+
+\begin{align}
+& (1 + x)^{n} > nv, \\
+& \displaystyle  (1 + x)^{n} > \frac{n(n-1)}{2}x^{2}.
+\end{align}
+\end{enumerate}
+
