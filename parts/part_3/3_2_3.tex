@@ -1,0 +1,116 @@
+% 3_2_3 Арифметические операции над сходящимися последовательностями
+
+При вычислении пределов последовательностей часто приходится использовать
+теорему о~пределе суммы, разности, произведения и~частного последовательностей.
+
+\begin{Th}\label{th:3_2_3_3}
+Если 
+$\displaystyle \lim_{n \to \infty} x_{n} = a$,
+$\displaystyle \lim_{n \to \infty} y_{n} = b$, то:
+
+\begin{enumerate}
+\item 
+$\displaystyle \lim_{n \to \infty} \left( x_{n} + y_{n} \right) = a + b$;
+\item
+$\displaystyle \lim_{n \to \infty} \left( x_{n} y_{n} \right) = ab$;
+\item
+$\displaystyle \lim_{n \to \infty} \frac{x_{n}}{y_{n}} = \frac{a}{b}$,
+\; при условии, что $y_{n} \ne 0 \; (n \in \mathbb{N})$ и~$b \ne 0$.
+\end{enumerate}
+\end{Th}
+
+Так как $x_{n} \to a$, $y_{n} \to b$ при $n \to \infty$, то $x_{n} = a + \alpha_{n}$,
+$y_{n} = b + \beta_{n}$, где $\left\{ \alpha_{n} \right\}$ и~$\left\{ \beta_{n} \right\}$
+"--- бесконечно малые последовательности.
+
+\begin{enumerate}
+\item Из равенства $x_{n} + y_{n} = (a + b) + (\alpha_{n} + \beta_{n})$,
+где $\left\{ \alpha_{n} + \beta_{n} \right\}$ "--- бесконечно малая последовательность
+(теорема \ref{th:3_2_1_1}), получаем $x_{n} + y_{n} \to a + b$ при $n \to \infty$.
+
+\item Так как
+$x_{n}y_{n} = (a + \alpha_{n})(b + \beta_{n}) = ab + a\beta_{n} + b\alpha_{n} + \alpha_{n}\beta_{n}$,
+где $\left\{ a\beta_{n} + b\alpha_{n} + \alpha_{n}\beta_{n} \right\}$
+"--- бесконечно малая последовательность (теорема \ref{th:3_2_1_1} и  \ref{th:3_2_1_2}),
+то $x_{n}y_{n} \to ab$ при $n \to \infty$.
+
+\item Докажем, что $\displaystyle \left\{ \frac{x_{n}}{y_{n}} - \frac{a}{b} \right\}$
+бесконечно малая последовательность. \\
+Имеем
+
+\begin{equation*}
+\displaystyle z_{n} = \frac{x_{n}}{y_{n}} - \frac{a}{b} =
+\frac{(a+\alpha_{n})b - (b + \beta_{n})a}{by_{n}} =
+\left( \alpha_{n} - \frac{a}{b}\beta_{n} \right) \frac{1}{y_{n}},
+\end{equation*}
+
+где $\displaystyle \left\{ \alpha_{n} - \frac{a}{b}\beta_{n} \right\}$
+бесконечно малая последовательность (теорема \ref{th:3_2_1_1} и~\ref{th:3_2_1_2}).
+Так как $y_{n} \ne 0$ при $n \in \mathbb{N}$ и~$\displaystyle \lim_{n \to \infty} y_{n} = b$,
+где $b \ne 0$, то $\displaystyle \left\{ \frac{1}{y_{n}} \right\}$ "---
+ограниченная последовательность (задача \ref{ex:3_1_4_3}).
+Поэтому последовательность $\left\{ x_{n} \right\}$ является бесконечно малой
+(теорема \ref{th:3_2_1_2}), откуда получаем
+
+\begin{equation*}
+\displaystyle \frac{x_{n}}{y_{n}} \to \frac{a}{b} \; \text{при} \; n \to \infty.
+\end{equation*}
+
+\end{enumerate}
+
+\textbf{Задача 1.}\label{ex:3_2_3_1} Найти $\displaystyle \lim_{n \to \infty} x_{n}$ если:
+
+\begin{enumerate}
+\item
+$\displaystyle x_{n} = \frac{4n^{3} + 2n - 5}{3n^{3} + 2n^{2} - 4}$;
+\item
+$\displaystyle x_{n} = \sqrt{2n^{2} + 3n + 4} - \sqrt{2n^{2} - n + 5}$.
+\end{enumerate}
+
+1) Разделив числитель и знаменатель дроби на $n^{3}$
+получим
+
+\begin{equation*}
+\displaystyle x_{n} =
+\frac{4 + \frac{3}{n^{2}} - \frac{5}{n^{3}}}{3 + \frac{2}{n} - \frac{4}{n^{3}}}.
+\end{equation*}
+
+\noindent
+Так как последовательности 
+$\displaystyle \frac{1}{n}$,
+$\displaystyle \frac{1}{n^{2}}$,
+$\displaystyle \frac{1}{n^{3}}$
+являются бесконечно малыми, то числитель имеет предел, равный~4,
+а~знаменатель имеет предел, равный~3.
+По теореме \ref{th:3_2_3_3} получим $\displaystyle \lim_{n \to \infty} x_{n} = \frac{4}{3}$.
+
+2) Умножив и~разделив $x_{n}$ на
+$\sqrt{2n^{2} + 3n + 4} + \sqrt{2n^{2} - n + 5}$
+получим
+
+\begin{equation*}
+\displaystyle x_{n} = 
+\frac{(2n^{2} + 3n + 4) - (2n^{2} - n + 5)}{\sqrt{2n^{2} + 3n + 4} + \sqrt{2n^{2} - n + 5}} =
+\frac{4n -1}{\sqrt{2n^{2} + 3n + 4} + \sqrt{2n^{2} - n + 5}}.
+\end{equation*}
+
+\noindent
+Разделив числитель и знаменатель полученной дроби на $n$, находим
+
+\begin{equation*}
+\displaystyle x_{n} = 
+\frac
+{4 - \frac{1}{n}}
+{\sqrt{2 + \frac{3}{n} + \frac{4}{n^{2}}} + \sqrt{2 - \frac{1}{n} + \frac{5}{n^{2}}}}.
+\end{equation*}
+
+\noindent
+Так как $\sqrt{2 + \frac{3}{n} + \frac{4}{n^{2}}} \to \sqrt{2}$
+и~$\sqrt{2 - \frac{1}{n} + \frac{5}{n^{2}}} \to \sqrt{2}$
+(задача \ref{ex:3_1_5_5}), то предел знаменателя равен $2\sqrt{2}$.
+Применяя теорему \ref{th:3_2_3_3} получаем
+
+\begin{equation*}
+\displaystyle \lim_{n \to \infty} x_{n} = \frac{4}{2\sqrt{2}} = \sqrt{2}.
+\end{equation*}
+
