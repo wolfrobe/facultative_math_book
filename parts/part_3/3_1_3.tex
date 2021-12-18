@@ -3,9 +3,9 @@
 
 Рассмотрим числовую последовательность $\{x_{n}\}$,
 где $\displaystyle x_{n} = 1 + \frac{(-1)^{n-1}}{n}$.
-Будем изображать члены этой последовательности точками на числовой прямой (рис.\ \ref{fig:3_1_1})
+Будем изображать члены этой последовательности точками на числовой прямой (рис.\ \ref{fig:3_1_3_1})
 
-\begin{figure}\label{fig:3_1_1}
+\begin{figure}\label{fig:3_1_3_1}
 % рис 1 стр 109
 \end{figure}
 
@@ -41,7 +41,7 @@ $\displaystyle |x_{n} - a| < \frac{1}{n} \leqslant \frac{1}{N} < \varepsilon$.
 что для всех $n \geqslant N_{\varepsilon}$ выполняется неравенство
 \end{Def}
 
-\begin{equation}\label{eq:3_1_2}
+\begin{equation}\label{eq:3_1_3_2}
 |x_{n} - a| < \varepsilon.
 \end{equation}
 
@@ -53,17 +53,17 @@ $\displaystyle |x_{n} - a| < \frac{1}{n} \leqslant \frac{1}{N} < \varepsilon$.
 \end{equation*}
 
 \noindent
-Заметим, что неравенство \eqref{eq:3_1_2} равносильно неравенству
+Заметим, что неравенство \eqref{eq:3_1_3_2} равносильно неравенству
 $-\varepsilon < x_{n} - a < \varepsilon$, а~также неравенству
 
-\begin{equation}\label{eq:3_1_3}
+\begin{equation}\label{eq:3_1_3_3}
 a - \varepsilon < x_{n} < a + \varepsilon.
 \end{equation}
 
 Условимся интервал $(a - \varepsilon, a + \varepsilon)$ называть $\varepsilon$-окрестностью
-точки $a$ (рис.\ \ref{fig:3_1_2})
+точки $a$ (рис.\ \ref{fig:3_1_3_2})
 
-\begin{figure}\label{fig:3_1_2}
+\begin{figure}\label{fig:3_1_3_2}
 % рис 2 стр 110
 \end{figure}
 
@@ -71,7 +71,7 @@ a - \varepsilon < x_{n} < a + \varepsilon.
 и~обозначить $U_{\varepsilon}(a)$, т.е.\ $U_{\varepsilon} = (a - \varepsilon, a + \varepsilon)$.
 
 Пусть $a$ "--- предел последовательности $\{ x_{n} \}$, тогда при
-$n \geqslant N_{\varepsilon}$ выполняется неравенство \eqref{eq:3_1_3}, т.е.\
+$n \geqslant N_{\varepsilon}$ выполняется неравенство \eqref{eq:3_1_3_3}, т.е.\
 
 \begin{equation*}
 x_{n} \in U_{\varepsilon}(a) \; \text{при} \; n \geqslant N_{\varepsilon}.
@@ -90,16 +90,16 @@ $x_{N_{\varepsilon}}$ принадлежат $\varepsilon$-окрестност�
 имеет предел, равный $a$, тогда и только тогда, когда последовательность $\{x_{n}-a\}$
 имеет предел, равный нулю.
 
-\textbf{Задача 1.}\label{ex:3_1_1}
+\textbf{Задача 1.}\label{ex:3_1_3_1}
 Пользуясь определением, доказать, что последовательность $\{x_{n}\}$ имеет предел
 и~найти его, если:
 
 \begin{enumerate}
-\item\label{ex:3_1_1_1} $\displaystyle x_{n} = \frac{1}{\sqrt[3]{n}}$;
-\item\label{ex:3_1_1_2} $x_{n} = aq^{n}$, где $|q| <1$, $a > 0$;
-\item\label{ex:3_1_1_3} $x_{n} = 1 + q + \dots + q^{n-1}$, где $|q| < 1$;
-\item\label{ex:3_1_1_4} $x_{n} = \sqrt{n+1} - \sqrt{n}$;
-\item\label{ex:3_1_1_5} 
+\item\label{ex:3_1_3_1_1} $\displaystyle x_{n} = \frac{1}{\sqrt[3]{n}}$;
+\item\label{ex:3_1_3_1_2} $x_{n} = aq^{n}$, где $|q| <1$, $a > 0$;
+\item\label{ex:3_1_3_1_3} $x_{n} = 1 + q + \dots + q^{n-1}$, где $|q| < 1$;
+\item\label{ex:3_1_3_1_4} $x_{n} = \sqrt{n+1} - \sqrt{n}$;
+\item\label{ex:3_1_3_1_5} 
 $\displaystyle x_{n} = \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n+1)}$.
 \end{enumerate}
 
@@ -173,26 +173,26 @@ $\displaystyle n > \frac{1}{4\varepsilon^{2}}$,
 $\displaystyle \frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1}$,
 получаем
 
-\begin{multline*}
+\begin{equation*}
 \displaystyle
 x_{n} =
-\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n+1)} = \\
-= 1 - \frac{1}{2} + \frac{1}{2} - \frac{1}{3} + \dots + \frac{1}{n} - \frac{1}{n+1} = \\
-= 1 - \frac{1}{n+1},
-\end{multline*}
+\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdot + \frac{1}{n(n+1)} =
+1 - \frac{1}{2} + \frac{1}{2} - \frac{1}{3} + \dots + \frac{1}{n} - \frac{1}{n+1} =
+1 - \frac{1}{n+1},
+\end{equation*}
 
 \noindent
 откуда находим $\displaystyle \lim_{n \to \infty} x_{n} = 1$.
 
 \end{enumerate}
 
-\textbf{Задача 2.}\label{ex:3_1_2}
+\textbf{Задача 2.}\label{ex:3_1_3_2}
 Доказать, что последовательность $\{x_{n}\}$, где $x_{n} = (-1)^{n}$, является расходящейся.
 
 На числовой оси члены данной последовательности изображаются точками -1 и~1,
-причём $x_{2k} = 1$, $x_{2k-1} = -1$, $k \in \mathbb{N}$ (рис.\ \ref{fig:3_1_3}).
+причём $x_{2k} = 1$, $x_{2k-1} = -1$, $k \in \mathbb{N}$ (рис.\ \ref{fig:3_1_3_3}).
 
-\begin{figure}\label{fig:3_1_3}
+\begin{figure}\label{fig:3_1_3_3}
 % рис 3 стр 113
 \end{figure}
 

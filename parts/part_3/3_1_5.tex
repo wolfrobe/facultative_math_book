@@ -1,9 +1,9 @@
 % subsubsection{Свойства сходящихся последовательностей, связанные с~неравенствами}
 
-\begin{Th}\label{th:3_1_2}
+\begin{Th}\label{th:3_1_5_2}
 Если  для всех $n \in N$ выполняется неравенства
 
-\begin{equation}\label{eq:3_1_6}
+\begin{equation}\label{eq:3_1_5_6}
 x_{n} \leqslant y_{n} \leqslant z_{n},
 \end{equation}
 
@@ -35,9 +35,9 @@ $N_{1}$ и~$N_{2}$ такие, что
 Пусть $N$ "--- наибольшее из чисел $N_{1}$, $N_{2}$.
 Тогда при всех $n \geqslant N$ имеем
 $x_{n} \in U_{\varepsilon}(a)$, $z_{n} \in U_{\varepsilon}(a)$.
-Отсюда и~из условия \eqref{eq:3_1_6} следует \ref{fig:3_1_4},
+Отсюда и~из условия \eqref{eq:3_1_5_6} следует \ref{fig:3_1_5_4},
 
-\begin{figure}\label{fig:3_1_4}
+\begin{figure}\label{fig:3_1_5_4}
 % рис 4 стр 115
 \end{figure}
 
@@ -45,20 +45,20 @@ $x_{n} \in U_{\varepsilon}(a)$, $z_{n} \in U_{\varepsilon}(a)$.
 что $y_{n} \in U_{\varepsilon}(a)$ при всех $n \in N$, т.е.\ существует
 $\displaystyle \lim_{n \to \infty} y_{n} = a$.
 
-\begin{Note}\label{nt:3_1_3}
-Теоремой \ref{th:3_1_2} часто пользуются при вычислении пределов.
+\begin{Note}\label{nt:3_1_5_3}
+Теоремой \ref{th:3_1_5_2} часто пользуются при вычислении пределов.
 
 Она утверждает, что если две последовательности $\{x_{n}\}$ и~$\{z_{n}\}$
 имеют один и~тот же предел, а~каждый член третьей последовательности $\{y_{n}\}$
 <<зажат>> между соответствующими членами этих двух последовательностей,
 то и~последовательность $\{y_{n}\}$ имеет тот же предел.
-Поэтому теорему \ref{th:3_1_2} иногда называют теоремой о~<<зажатой>>
+Поэтому теорему \ref{th:3_1_5_2} иногда называют теоремой о~<<зажатой>>
 последовательности.
 \end{Note}
 
-\textbf{Задача 4.}\label{ex:3_1_4} Доказать, что если $a > 1$, то
+\textbf{Задача 4.}\label{ex:3_1_5_4} Доказать, что если $a > 1$, то
 
-\begin{equation}\label{eq:3_1_7}
+\begin{equation}\label{eq:3_1_5_7}
 \displaystyle \lim_{n \to \infty} \sqrt[n]{a} = 1.
 \end{equation}
 
@@ -67,25 +67,25 @@ $\displaystyle \lim_{n \to \infty} y_{n} = a$.
 Тогда $a = (1 + \alpha_{n})^{n} > \alpha_{n} \cdot n$ откуда
 $\displaystyle 0 < \alpha_{n} < \frac{a}{n}$, т.е.\
 $\displaystyle 0 < \sqrt[n]{a} - 1 < \frac{a}{n}$.
-Откуда по теореме \ref{th:3_1_2} следует утверждение \eqref{eq:3_1_7}.
+Откуда по теореме \ref{th:3_1_5_2} следует утверждение \eqref{eq:3_1_5_7}.
 
-\begin{Th}\label{th:3_1_3}
+\begin{Th}\label{th:3_1_5_3}
 Если
 $\displaystyle \lim_{n \to \infty} x_{n} = a$,
 $\displaystyle \lim_{n \to \infty} y_{n} = b$,
 причём $a < b$, то существует номер $N$ такой, что при всех $n \geqslant N$
 выполняется неравенство
 
-\begin{equation}\label{eq:3_1_8}
+\begin{equation}\label{eq:3_1_5_8}
 x_{n} < y_{n}
 \end{equation}
 \end{Th}
 
 Выберем $\displaystyle \varepsilon = \frac{b - a}{3}$.
 Тогда $\varepsilon$ "--- окрестности точек $a$ и~$b$ не имеют общих точек
-(рис.\ \ref{fig:3_1_5})
+(рис.\ \ref{fig:3_1_5_5})
 
-\begin{figure}\label{fig:3_1_5}
+\begin{figure}\label{fig:3_1_5_5}
 % hрис 5 стр 116
 \end{figure}
 
@@ -120,21 +120,21 @@ b + \varepsilon,
 $\displaystyle \lim_{n \to \infty} x_{n} = a$,
 $\displaystyle \lim_{n \to \infty} y_{n} = b$ и
 
-\begin{equation}\label{eq:3_1_9}
+\begin{equation}\label{eq:3_1_5_9}
 x_{n} \geqslant y_{n} \; \text{при} \; n \geqslant N, \; \text{то}
 \end{equation}
 
-\begin{equation}\label{eq:3_1_10}
+\begin{equation}\label{eq:3_1_5_10}
 a \geqslant b.
 \end{equation}
 
-Пусть неравенство \eqref{eq:3_1_10} не выполняется, тогда $a < b$
-и~по теореме \ref{th:3_1_3} справедливо утверждение \eqref{eq:3_1_8},
+Пусть неравенство \eqref{eq:3_1_5_10} не выполняется, тогда $a < b$
+и~по теореме \ref{th:3_1_5_3} справедливо утверждение \eqref{eq:3_1_5_8},
 % TODO: в тексте ссылка на теорему 4, но такой в этом разделе нет
-которое противоречит условию \eqref{eq:3_1_9}.
-Следовательно, должно выполняться неравенство \eqref{eq:3_1_10}.
+которое противоречит условию \eqref{eq:3_1_5_9}.
+Следовательно, должно выполняться неравенство \eqref{eq:3_1_5_10}.
 
-\begin{Note}\label{nt:3_1_4}
+\begin{Note}\label{nt:3_1_5_4}
 Если $x_{n} \geqslant 0$ при всех $n \in N$ и~существует
 
 \begin{equation*}
@@ -142,7 +142,7 @@ a \geqslant b.
 \end{equation*}
 \end{Note}
 
-\textbf{Задача 5.}\label{ex:3_1_5}
+\textbf{Задача 5.}\label{ex:3_1_5_5}
 Пусть $a_{n} \geqslant 0$ при всех $n \in N$ и~пусть существует
 $\displaystyle \lim_{n \to \infty} a_{n} = a$.
 Доказать, что
@@ -151,7 +151,7 @@ $\displaystyle \lim_{n \to \infty} a_{n} = a$.
 \displaystyle \lim_{n \to \infty} \sqrt{a_{n}} = \sqrt{a}.
 \end{equation*}
 
-Заметим, что $a \geqslant 0$ (см.\ замечание \ref{nt:3_1_3}).
+Заметим, что $a \geqslant 0$ (см.\ замечание \ref{nt:3_1_5_3}).
 Поэтому существует $\sqrt{a}$. По определению предела для любого $\varepsilon > 0$
 найдётся номер $N$ такой, что для всех $n \geqslant N$ выполняется неравенство
 $|a_{n} - a| < \varepsilon\sqrt{a}$. Так как
