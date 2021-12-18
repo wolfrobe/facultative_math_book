@@ -1,0 +1,121 @@
+% 3_2_1 Бесконечно малые последовательности
+
+Последовательность называется бесконечно малой, если 
+
+\begin{equation*}
+\displaystyle \lim_{n \to \infty} d_{n} = 0.
+\end{equation*}
+
+Согласно определению предела это означает, что для любого $\varepsilon > 0$
+существует номер $N$ такой, что для всех $n \geqslant N$ выполняется неравенство
+
+\begin{equation*}
+|d_{n}| < \varepsilon.
+\end{equation*}
+
+\noindent
+Примерами бесконечно малых последовательностей являются последовательности
+
+\begin{gather*}
+\displaystyle \left\{ \frac{1}{n} \right\}, \;
+\left\{ q^{n} \right\}, \; \text{где} \; |q| < 1; \\
+\left\{ \sqrt[n]{a - 1} \right\}, \; \text{где} \; a > 1.
+\end{gather*}
+
+Понятие бесконечно малой последовательности удобно использовать
+при доказательстве свойств сходящихся последовательностей.
+Пусть существует $\displaystyle \lim_{n \to \infty} x_{n} = a$.
+Обозначим $\alpha_{n} = x_{n} - a$.
+По определению предела для любого $\varepsilon > 0$ существует
+номер $N$ такой, что для всех $n \geqslant N$ выполняется неравенство
+
+\begin{equation*}
+\left| x_{n} - a \right| = |\alpha_{n}| < \varepsilon
+\end{equation*}
+
+\noindent
+и~поэтому последовательность $\left\{ \alpha_{n} \right\}$ является бесконечно малой.
+Обратно, если существует число $a$ такое, что $x_{n} = a + \alpha_{n}$,
+где $\left\{ \alpha_{n} \right\}$ бесконечно малая последовательность,
+то существует $\displaystyle \lim_{n \to \infty} x_{n} = a$.
+
+Рассмотрим арифметические операции над сходящимися последовательностями.
+Назовём суммой, разностью, произведением и~частным последовательностей
+$\{ x_{n} \}$ и~$\{ y_{n} \}$ соответственно последовательности
+$\left\{ x_{n} + y_{n} \right\}$,
+$\left\{ x_{n} - y_{n} \right\}$,
+$\left\{ x_{n} y_{n} \right\}$,
+$\displaystyle \left\{ \frac{x_{n}}{y_{n}} \right\}$.
+При определении частного предполагается, что $y_{n} \ne 0$ при $n \in \mathbb{N}$.
+
+\begin{Th}\label{th:3_2_1_1}
+Сумма и~разность бесконечно малых последовательностей являются бесконечно
+малыми последовательностями.
+\end{Th}
+
+Пусть $\left\{ \alpha_{n} \right\}$ и~$\left\{ \beta_{n} \right\}$
+"---  бесконечно малые последовательности. Тогда для любого $\varepsilon > 0$
+найдутся номера $N_{1}$ и~$N_{2}$ такие, что
+
+\begin{gather*}
+\displaystyle \left| \alpha_{n} \right| < \frac{\varepsilon}{2} \;
+\text{при} \; n \geqslant N_{1}, \\
+\displaystyle \left| \beta_{n} \right| < \frac{\varepsilon}{2} \;
+\text{при} \; n \geqslant N_{2}.
+\end{gather*}
+
+\noindent
+Пусть $N$ "--- наибольшее из чисел $N_{1}$, $N_{2}$.
+Тогда неравенство
+
+\begin{equation*}
+\left| \alpha_{n} \pm \beta_{n} \right| \leqslant
+\left| \alpha_{n} \right| + \left| \beta_{n} \right| < 
+\displaystyle \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon.
+\end{equation*}
+
+\noindent
+выполняется при всех $n \geqslant N$.
+Поэтому последовательности
+$\left\{ \alpha_{n} + \beta_{n} \right\}$ и~$\left\{ \alpha_{n} - \beta_{n}\right\}$
+являются бесконечно малыми.
+
+\begin{Th}\label{th:3_2_1_2}
+Произведение бесконечно малой последовательности на ограниченную последовательность
+является бесконечно малой последовательностью.
+\end{Th}
+
+Пусть $\left\{ \alpha_{n} \right\}$ "--- ограниченная последовательность,
+$\left\{ \beta_{n} \right\}$ "--- бесконечно малая последовательность.
+Из определения ограниченной последовательности следует, что существует число
+$C > 0$ такое, что для всех $n \in \mathbb{N}$ выполняется неравенство
+
+\begin{equation*}
+\left| \alpha_{n} \right| < 0.
+\end{equation*}
+
+\noindent
+Так как $\left\{ \beta_{n} \right\}$ "--- бесконечно малая последовательность,
+то для любого $\varepsilon > 0$ найдётся номер $N$ такой, что при всех
+$n \geqslant N$ справедливо неравенство
+
+\begin{equation*}
+\displaystyle \left| \beta_{n} \right| < \frac{\varepsilon}{C}.
+\end{equation*}
+
+\noindent
+Отсюда следует, что при $n \geqslant N$ выполняется неравенство
+
+\begin{equation*}
+\left| \alpha_{n} \cdot \beta_{n} \right| =
+\left| \alpha_{n} \right| \cdot \left| \beta_{n} \right| <
+\displaystyle \frac{\varepsilon}{C} \cdot C = \varepsilon,
+\end{equation*}
+
+\noindent
+т.е.\ $\left\{ \alpha_{n}\beta_{n} \right\}$ "--- бесконечно малая последовательность.
+
+\textbf{Следствие.} Произведение двух сходящихся последовательностей,
+из которых хотя бы одна является бесконечно малой,
+есть бесконечно малая последовательность
+(см.\ теорему \ref{th:3_1_5_2})
