@@ -1,0 +1,109 @@
+%% 3.3 Предел монотонной последовательности. 
+%% 3.3.2 Число e
+
+Рассмотрим последовательность $\left\{ x_{n} \right\}$, где
+
+\begin{equation*}
+\displaystyle x_{n} =
+\left ( 
+1 + \frac{1}{n}
+\right )^{n}.
+\end{equation*}
+
+\noindent
+Покажем, что эта последовательность является возрастающей и~ограниченной сверху.
+Используя формулу бинома Ньютона, получаем
+
+\begin{equation*}
+\displaystyle x_{n} = 
+1 +
+C_{n}^{1} \cdot \frac{1}{n} +
+C_{n}^{2} \cdot \frac{1}{n} +
+\dots +
+C_{n}^{k} \cdot \frac{1}{n^{k}} +
+\dots +
+\frac{1}{n^{n}},
+\end{equation*}
+
+\noindent
+где 
+$\displaystyle C_{n}^{k} = \frac{n(n-1) \dots \left( n - (k-1) \right)}{k!}$,
+$k = 1{,} 2{,} \dots {,} n$.
+Запишем $x_{n}$ в~виде суммы
+
+\begin{multline}\label{eq:3_3_2_5}
+\displaystyle x = 
+2 +
+\frac{1}{2!}\left( 1 - \frac{1}{n} \right) +
+\frac{1}{3!}\left( 1 - \frac{1}{n} \right)\left( 1 - \frac{2}{n} \right) + \dots \\
+\dots +
+\frac{1}{k!}\left( 1 - \frac{1}{n} \right)\left( 1 - \frac{2}{n} \right) \dots
+\left( 1 - \frac{k-1}{n} \right) + \dots \\
+\dots +
+\frac{1}{n!}\left(1 - \frac{1}{n} \right)\left( 1- \frac{2}{n} \right) \dots
+\left( 1 - \frac{n-1}{n} \right),
+\end{multline}
+
+\noindent
+содержащей $n$ положительных членов.
+
+Заменив в~формуле \eqref{eq:3_3_2_5} $n$ на $n+1$, получим
+
+\begin{multline}\label{eq:3_3_2_6}
+\displaystyle x_{n+1} = 
+2 +
+\frac{1}{2!}
+\left( 1 - \frac{1}{n+1} \right) + \dots \\
+\dots +
+\frac{1}{k!}\left( 1 - \frac{1}{n+1} \right)
+\dots 
+\left( 1 - \frac{k-1}{n+1} \right) + \dots \\
+\dots + 
+\frac{1}{n!}\left( 1 - \frac{1}{n+1} \right)
+\dots
+\left( 1 - \frac{n-1}{n+1} \right) + \\
++ \frac{1}{(n+1)!}\left( 1 - \frac{1}{n+1} \right)\left( 1 - \frac{2}{n+1} \right)
+\dots
+\left( 1 - \frac{n}{n+1} \right).
+\end{multline}
+
+\noindent
+Заметим, что сумма \eqref{eq:3_3_2_6}, как и~сумма \eqref{eq:3_3_2_5},
+содержит положительные слагаемые (в~сумме \eqref{eq:3_3_2_6}) их на одно больше),
+причём каждое слагаемое суммы \eqref{eq:3_3_2_5} меньше соответствующего
+слагаемого суммы \eqref{eq:3_3_2_6}.
+Следовательно, $x_{n} < x_{n+1}$, т.е.\ $\left\{ x_{n} \right\}$
+"--- возрастающая последовательность.
+
+Из формулы \eqref{eq:3_3_2_5} следует, что
+
+\begin{equation*}
+\displaystyle x_{n} < 2 + \frac{1}{2!} + \frac{1}{3!} + \dots + \frac{1}{n!}.
+\end{equation*}
+
+\noindent
+Так как $k! = 2 \cdot 3 \dots K \geqslant 2^{k-1}$ при $k \geqslant 2$, то
+
+\begin{equation*}
+\displaystyle x_{n} < 2 + \frac{1}{2} + \frac{1}{2^{2}} + \dots + \frac{1}{2^{n-1}} = 
+2 + \frac{\frac{1}{2}\left( 1 - \frac{1}{2^{n-1}} \right)}{1 - \frac{1}{2}} =
+3 - \frac{1}{2^{n-1}},
+\end{equation*}
+
+\noindent
+откуда $x_{n} < 3$.
+
+Итак, последовательность $\left\{ x_{n} \right\}$ "--- возрастающая
+и~ограниченная сверху. По теореме \ref{th:3_3_1_1} она имеет предел, который обозначается $e$,
+т.е.\
+
+\begin{equation*}
+\displaystyle \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^{n} = e.
+\end{equation*}
+
+Число $e$ играет важную роль в~математике и~её приложениях.
+Это число является иррациональным и~справедливо приближённое равенство
+
+\begin{equation*}
+e \approx 2{,}7182818284590 .
+\end{equation*}
