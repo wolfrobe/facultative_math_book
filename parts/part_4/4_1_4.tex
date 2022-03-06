@@ -1,0 +1,110 @@
+% 4_1_4 Свойства пределов функций
+
+Ограничимся наиболее важными свойствами пределов, которые часто используются
+при вычислении пределов.
+
+\textbf{Теорема 1.}\label{th:4_1_4_1} Если существует число $\delta > 0$ такое,
+что для всех $x \in \dot U_{\delta}(a)$ выполняется неравенства
+
+\begin{equation}\label{eq:4_1_4_1}
+g(x) \leqslant f(x) \leqslant h(x)
+\end{equation}
+
+\noindent
+и~если
+
+\begin{equation}\label{eq:4_1_4_2}
+\displaystyle \lim_{x \to a} g(x) = \lim_{x \to a} h(x) = A,
+\end{equation}
+
+\noindent
+то существует $\displaystyle \lim_{x \to a} f(x) = A$.
+
+Воспользуемся определением предела по Гейне.
+Пусть $\left\{ x_{n} \right\}$ "--- произвольная последовательность такая,
+что $x_{n} \in \dot U_{\delta}(a)$ при $n \in \mathbb{N}$
+и~$\displaystyle \lim_{n \to \infty} x_{n} = a$.
+В~силу условий \eqref{eq:4_1_4_2}
+
+\begin{equation*}
+\displaystyle \lim_{n \to \infty} g(x_{n}) = \lim_{n \to \infty} h(x_{n}) = A.
+\end{equation*}
+
+Кроме того, из \eqref{eq:4_1_4_1} следует, что
+
+\begin{equation*}
+g(x_{n}) \leqslant f(x_{n}) \leqslant h(x_{n})
+\end{equation*}
+
+\noindent
+для всех $n \in \mathbb{N}$. Отсюда в~силу свойств пределов последовательностей
+заключаем, что $\displaystyle \lim_{n \to +\infty} f(x_{n}) = A$.
+Согласно определению предела функции это означает, что существует
+$\displaystyle \lim_{x \to a} f(x) = A$.
+
+\textbf{Теорема 2.}\label{th:4_1_4_2} Если функция f(x) и q(x) имеют конечные пределы
+в~точке $a$, причём $\displaystyle \lim_{x \to a} f(x) = A$,
+$\displaystyle \lim_{x \to a} g(x) = B$, то
+
+\begin{gather}
+\displaystyle \lim_{x \to a} \left( f(x) + g(x) \right) = A + B, \label{eq:4_1_4_3} \\
+\displaystyle \lim_{x \to a} \left( f(x) g(x) \right) = AB, \label{eq:4_1_4_4} \\
+\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{A}{B} \label{eq:4_1_4_5}
+\end{gather}
+
+\noindent
+при условии, что $B \ne 0$.
+
+Для доказательства равенств \eqref{eq:4_1_4_3} - \eqref{eq:4_1_4_5}
+можно воспользоваться определением предела по Гейне
+и~свойствами пределов последовательностей.
+
+Теорему \ref{th:4_1_4_2} можно доказать также с помощью определения
+предела функции по Коши. В~этом случае удобно использовать понятие бесконечно
+малой функции, которое вводится по аналогии с~соответствующим понятием
+для последовательностей.
+
+Функцию $\alpha(x)$ называют бесконечно малой при $x \to a$ если
+$\displaystyle \lim_{x \to a} \alpha(x) = 0$ .
+
+Бесконечно малые функции обладают следующими легко проверяемыми свойствами:
+
+\begin{enumerate}
+\item сумма (разность) двух бесконечно малых при $x \to a$ функций есть
+бесконечно малая при $x \to a$ функция;
+\item произведение бесконечно малой при $x \to a$ функции на ограниченную
+в~некоторой проколотой окрестности точки $a$ функцию есть бесконечно малая
+при $x \to a$ функция.
+\end{enumerate}
+
+\begin{Note}\label{nt:4_1_4_1}
+Из определения предела по Коши и~определения бесконечно малой функции следует,
+что число $A$ является пределом функции $f(x)$ в~точке $a$ тогда и~только тогда,
+когда эта функция представляется в~виде
+
+\begin{equation*}
+f(x) = A + \alpha(x),
+\end{equation*}
+
+\noindent
+где $\alpha(x)$ "--- бесконечно малая при $x \to a$ функция.
+\end{Note}
+
+Используя замечание \ref{nt:4_1_4_1} и~свойства бесконечно малых функций,
+легко доказать теорему \ref{th:4_1_4_2}.
+
+\textbf{Задача 4.}\label{ex:4_1_4_4} Найти
+$\displaystyle \lim_{x \to \infty} \frac{3x^{2} - 4x +5}{(x + 1)^{2}}$.
+
+Разделив числитель и~знаменатель дроби на $x^{2}$, получим
+
+\begin{equation*} 
+\frac{3x^{2} - 4x + 5}{(2x + 1)^{2}} =
+\displaystyle \frac{3 - \frac{4}{x} + \frac{5}{x^{2}}}{4 + \frac{4}{x} + \frac{1}{x^{2}}}
+\end{equation*} 
+
+\noindent
+Так как $\displaystyle \frac{1}{x} \to 0$  и~$\displaystyle \frac{1}{x^{2}} \to 0$
+при $x \to \infty$, то в~силу теоремы \ref{th:4_1_4_2} получаем,
+что искомый предел равен $\displaystyle \frac{3}{4}$.
+
