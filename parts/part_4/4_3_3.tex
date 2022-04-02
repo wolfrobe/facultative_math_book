@@ -1,0 +1,138 @@
+% 4_3_3 Обратные тригонометрические функции
+
+Понятие обратной функции было введено в~курсе алгебры 9~класса.
+Приведём формулировку теоремы об обратной функции.
+
+\begin{Th}\label{th:4_3_3_1}
+Если функция $y = f(x)$ непрерывна и~возрастает на отрезке $[a,b]$,
+т.е.\ для любых точек $x_{1}$ и~$x_{2}$ этого отрезка таких, что $x_{1} < x_{2}$,
+выполняется неравенство $f(x_{1}) < f(x_{2})$, то на отрезке $\left[ f(a), f(b) \right]$
+определена функция $y = g(x)$, обратная к~функции $y = f(x)$, причём функция $g(x)$
+является непрерывной и~строго возрастающей.
+
+Аналогичное утверждение справедливо и~для убывающей функции.
+\end{Th}
+
+а)~Арксинус.\label{lst:4_3_3_1} Рассмотрим функцию
+\begin{equation}\label{eq:4_3_3_8}
+\displaystyle y = \sin \pi, \; x \in \left[ -\frac{\pi}{2}, \frac{\pi}{2} \right].
+\end{equation}
+
+\noindent
+Эта функция, график которой изображён на рис. \ref{fig:4_3_3_11},
+непрерывна на отрезке $\displaystyle \left[ -\frac{\pi}{2}, \frac{\pi}{2} \right]$
+и~строго возрастает.
+
+\begin{figure}\label{fig:4_3_3_11}
+% стр 148 рис 11
+\end{figure}
+
+Множество значений функции "--- отрезок $[-1, 1]$.
+По теореме об обратной функции на отрезке $[-1, 1]$ определена функция $y = \arcsin x$,
+обратная к функции \eqref{eq:4_3_3_8}, непрерывная и~строго возрастающая.
+График функции $y = \arcsin x$ изображённый на рис. \ref{fig:4_3_3_12},
+симметричен графику функции \eqref{eq:4_3_3_8} относительно прямой $y = x$.
+
+\begin{figure}\label{fig:4_3_3_12}
+% стр 149 рис 12
+\end{figure}
+
+Отметим равенства
+
+\begin{gather}\label{eq:4_3_3_9}
+\sin (\arcsin x) = x, \; x \in [-1, 1], \\
+\displaystyle \arcsin (\sin x) = x, \; x \in \left[ -\frac{\pi}{2}, \frac{\pi}{2} \right],
+\end{gather}
+
+\noindent
+которые выполняются в~силу свойств взаимно обратных функций.
+
+Заметим, что функция $\arcsin (\sin x)$ определена на всей прямой.
+Однако, равенство \eqref{eq:4_3_3_9} справедливо только при
+$\displaystyle x \in \left[ -\frac{\pi}{2}, \frac{\pi}{2} \right]$.
+Отметим также, что поскольку $\sin x$ "--- нечётная функция, то и~функция $\arcsin x$
+также является нечётной, т.е.\
+
+\begin{equation}\label{eq:4_3_3_10}
+\arcsin (-x) = -\arcsin x, \; x \in [-1, 1].
+\end{equation}
+
+\textbf{Задача 1.}\label{ex:4_3_3_1} Построить график функции $y = \arcsin (\sin x)$.
+
+Так как функция является периодической с~периодом $2\pi$, то достаточно построить её
+график на отрезке $\displaystyle \left[ -\frac{\pi}{2}, \frac{3\pi}{2} \right]$.
+
+Пусть $\displaystyle x \in \left[ -\frac{\pi}{2}, \frac{\pi}{2} \right]$,
+тогда $y = x$ в~силу равенства \eqref{eq:4_3_3_9}.
+Если $\displaystyle x \in \left[ \frac{\pi}{2}, \frac{3\pi}{2} \right]$,
+то $\displaystyle -\frac{\pi}{2} \leqslant x - \pi \leqslant \frac{\pi}{2}$.
+По формуле \eqref{eq:4_3_3_9} находим
+$\arcsin (\sin (x - \pi)) = x - \pi$,
+$\displaystyle x \in \left[ \frac{\pi}{2}, \frac{3\pi}{2} \right]$.
+С~другой стороны, $\sin (x - \pi) = -\sin x$
+и~поэтому $\arcsin (\sin (x - \pi)) = \arcsin (-\sin x)$, где
+$\arcsin (-\sin x) = -\arcsin (\sin x)$. Отсюда следует, что
+$x - \pi = -\arcsin (\sin x)$ и~поэтому
+$\arcsin (\sin x) = \pi - x$ при $\displaystyle x \in \left[ \frac{\pi}{2}, \frac{3\pi}{2} \right]$.
+
+Итак,
+\begin{equation*}
+y = \arcsin (\sin x) =
+\begin{cases}
+x, &\text{если} \; \displaystyle -\frac{\pi}{2} \leqslant x \leqslant \frac{\pi}{2}, \\
+\pi - x, &\text{если} \; \displaystyle \frac{\pi}{2} \leqslant x \leqslant \frac{3\pi}{2}.
+\end{cases}
+\end{equation*}
+
+График функции $y = \arcsin (\sin x)$ изображён на рис.\ \ref{fig:4_3_3_13}.
+
+\begin{figure}\label{fig:4_3_3_13}
+% стр 150 рис 13
+\end{figure}
+
+б)~Арккосинус.\label{pst:4_3_3_2} Рассмотрим функцию
+
+\begin{equation}\label{eq:4_3_3_11}
+y = \cos x, \; 0 \leqslant x \leqslant \pi.
+\end{equation}
+
+\noindent
+Эта функция непрерывна и~строго убывает. По теореме об обратной функции на отрезке
+$[-1, 1]$ определена функция $y = \arccos x$, обратная к функции \eqref{eq:4_3_3_11},
+непрерывная и~строго убывающая. График функции $y = \arccos x$, симметричный графику
+функции \eqref{eq:4_3_3_11}, изображён на рис.\ \ref{fig:4_3_3_14}.
+
+\begin{figure}\label{fig:4_3_3_14}
+% стр 150 рис 14
+\end{figure}
+
+в)~Арктангенс и~арккотангенс.\label{lst:4_3_3_3} Рассмотрим функцию
+
+\begin{equation}\label{eq:4_3_3_14}
+\displaystyle y = \tg x, \; -\frac{\pi}{2} < x < \frac{\pi}{2}.
+\end{equation}
+
+\noindent
+Эта функция непрерывна и~строго возрастает, множество её значений "--- $\mathbb{R}$.
+По теореме об обратной функции на $\mathbb{R}$ определена функция $y = \arctg x$,
+непрерывна и~строго возрастающая, график которой симметричен графику \ref{fig:4_3_3_14}
+относительно прямой $y = x$ (рис.\ \ref{fig:4_3_3_15}).
+
+\begin{figure}\label{fig:4_3_3_15}
+% стр 151 рис 15
+\end{figure}
+
+В~силу свойств взаимно обратных функций справедливы равенства
+
+\begin{gather*}
+\tg (\arctg x) = x, \; x \in \mathbb{R}, \\
+\displaystyle \arctg (\tg x) = x, \; x \in \left( -\frac{\pi}{2}, \frac{\pi}{2} \right), \\
+\arctg (-x) = -\arctg x, \; x \in \mathbb{R}.
+\end{gather*}
+
+Аналогично определяется функция $y = \arcctg x$, обратная к~функции $y = \ctg x$,
+$0 < x < \pi$. График функции $y = \arcctg x$ изображён на рис.\ \ref{fig:4_3_3_16}.
+
+\begin{figure}\label{fig:4_3_3_16}
+% стр 151 рис 16
+\end{figure}
