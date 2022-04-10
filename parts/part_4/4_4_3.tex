@@ -1,0 +1,130 @@
+% 4_4_3 Второй замечательный предел
+
+Известно, что
+
+\begin{equation*}
+\displaystyle \lim_{n \to \infty} \left( 1+ \frac{1}{n} \right)^{n} = e.
+\end{equation*}
+
+\noindent
+Справедливо и~более общее утверждение
+
+\begin{equation}\label{eq:4_4_3_1}
+\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{x} \right)^{x} = e.
+\end{equation}
+
+\noindent
+Полагая $\displaystyle y = \frac{1}{x}$, из \eqref{eq:4_4_3_1} получаем
+
+\begin{equation}\label{eq:4_4_3_2}
+\displaystyle \lim_{y \to 0} \left( 1 + y \right)^{\frac{1}{y}} = e.
+\end{equation}
+
+\noindent
+Равенство \eqref{eq:4_4_3_2} называют вторым замечательным пределом.
+Оно используется при выводе формулы для производной функции $e^{x}$.
+
+\textbf{Задача 3.}\label{ex:4_4_3_3} Найти
+$\displaystyle \lim_{x \to \infty} \left( 1 + \alpha x \right)^{\frac{1}{\beta x}}$,
+где $\alpha \ne 0$, $\beta \ne 0$.
+
+Так как
+
+\begin{gather*}
+\left(
+  1 + \alpha x
+\right)^{\frac{1}{\beta x}} =
+\left\{
+  \left(
+    1 + \alpha x
+  \right)^{\frac{1}{\alpha x}}
+\right\}^{\frac{\alpha}{\beta}}, \; \text{а} \\
+\displaystyle
+\lim_{x \to 0} 
+  \left(
+    1 + \alpha x
+  \right)^{\alpha x} =
+\lim_{t \to 0}
+  \left(
+    1 + t
+  \right)^{t} = e, \; \text{то} \\
+\displaystyle
+\lim_{x \to 0}
+  \left(
+    1 + \alpha x
+  \right)^{\frac{1}{\beta x}} =
+e^{\frac{\alpha}{\beta}}.
+\end{gather*}
+
+\begin{Note} Отсюда следует, что если $\beta \ne 0$, то
+
+\begin{equation*}
+\displaystyle
+\lim_{y \to \infty}
+  \left(
+    1 + \frac{\alpha}{y}
+  \right)^{\frac{y}{\beta}} =
+  e^{\frac{\alpha}{\beta}}.
+\end{equation*}
+
+\end{Note}
+
+\textbf{Задача 4.}\label{ex:4_4_3_4} Найти
+$\displaystyle
+\lim_{x \to \infty}
+  \left(
+    \frac{\left( x^{2} + 4 \right)}{x^{2} + 1}
+  \right)^{x^{2}}$
+
+Так как 
+$\displaystyle
+\left( \frac{\left( x^{2} + 4 \right)}{x^{2} + 1} \right)^{x^{2}} = 
+\left( \frac{1 + \frac{4}{x^{2}}}{1 + \frac{1}{x^{2}}} \right)^{x^{2}}$,
+то
+
+\begin{equation*}
+\displaystyle
+\lim_{x \to \infty}
+  \left(
+    \frac{\left( x^{2} + 4 \right)}{x^{2} + 1}
+  \right)^{x^{2}} = 
+  \frac{
+    \displaystyle \lim_{x \to \infty}\left( 1 + \frac{4}{x^{2}} \right)^{x^{2}}}{
+    \displaystyle \lim_{x \to \infty}\left( 1 + \frac{1}{x^{2}} \right)^{x^{2}}
+  } = \frac{e^{4}}{e} = e^{3}.
+\end{equation*}
+
+\textbf{Задача 5.}\label{ex:4_4_3_5} Доказать, что
+$\displaystyle \lim_{x \to 0}\frac{\ln(1 + x)}{x} = 1$
+
+Рассмотрим функцию
+
+\begin{equation*}
+\displaystyle f(x) = 
+\begin{cases}
+\left( 1 + x \right)^{\frac{1}{x}}, & x \ne 0, \\
+e, & x = 0.
+\end{cases}
+\end{equation*}
+
+Эта функция непрерывна в~точке $x = 0$, так как существует
+$\displaystyle \lim_{x \to 0} (1 + x)^{\frac{1}{x}} = e = f(0)$
+в~силу равенства \eqref{eq:4_4_3_2}.
+Отсюда следует, что функция $\ln f(x)$ непрерывна при $x = 0$
+(как суперпозиция непрерывных функций).
+
+Следовательно, 
+
+\begin{equation*}
+\displaystyle
+\lim_{x \to 0} \ln f(x) =
+\ln
+\left[ 
+\lim_{x \to 0} \left( 1 + x \right)^{\frac{1}{x}}
+\right] =
+\ln e = 1.
+\end{equation*}
+
+\noindent
+Так как $f(x) = (1 + x)^{\frac{1}{x}}$ при $x \ne 0$, то искомый предел равен 1.
+
