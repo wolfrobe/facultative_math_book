@@ -1,0 +1,33 @@
+% 4_4_2 Замена переменного при вычислении предела
+
+Если $\displaystyle \lim_{x \to a} \phi(x) = b$, $\displaystyle \lim_{y \to b} f(y) = A$,
+то
+
+\begin{equation*}
+\displaystyle \lim_{x \to a} f \left(\phi(x) \right) = \lim_{y \to b} f(b).
+\end{equation*}
+
+\noindent
+Это утверждение можно доказать, например, с~помощью определения предела функции по Гейне.
+
+\textbf{Задача 2.}\label{ex:4_4_2_2} Доказать, что:
+
+\begin{enumerate}
+\item $\displaystyle \lim_{x \to 0} \frac{\arcsin x}{x} = 1$,
+\item $\displaystyle \lim_{x \to 0} \frac{\arctg x}{x} = 1$.
+\end{enumerate}
+
+1) Пусть $y = \arcsin x$, тогда $x = \sin y$ и~поэтому
+$\displaystyle \frac{\arcsin x}{x} = \frac{y}{\sin y}$.
+При этом если $x \to 0$, то $y \to 0$. Следовательно,
+
+\begin{equation*}
+\displaystyle \lim_{x \to 0} \frac{\arcsin x}{x} =
+\lim_{y \to 0} \frac{y}{\sin y} = 1, \; \text{(\ref{sec:4_3_2})}. 
+\end{equation*}
+
+2) Пусть $y = \tg x$, тогда $x = \tg y$, причём если $x \to y \to 0$. Так как
+$$\displaystyle \frac{\arctg x}{x} = \frac{y}{\tg y}, \; \text{а}$$
+$$\displaystyle \lim_{y \to 0} \frac{y}{\tg y} =
+\lim_{y \to 0} \frac{y}{\sin y} \cos y = 1, \; \text{то}$$
+$$\displaystyle \lim_{x \to 0} \frac{\arctg x}{x} = 1.$$
