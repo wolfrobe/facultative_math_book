@@ -1,0 +1,135 @@
+% 4_4_1 Вычисление пределов функций
+% Раскрытие неопределённостей
+
+Вычисление передела функции часто сводится к~нахождению частного
+$\displaystyle \frac{f(x)}{g(x)}$, где $f(x)$ и~$g(x)$ "--- бесконечно малые функции
+при $x \to a$, т.е.\ $\displaystyle \lim_{x \to a} f(x) = 0$,
+$\displaystyle \lim_{x \to a} g(x) = 0$.
+В~этом случае вычисление предела, как иногда говорят, сводится к~раскрытию
+неопределённости вида $\displaystyle \frac{0}{0}$.
+
+Например, если $f(x) = (x - a)^{k} \cdot f_{1}(x)$,
+$g(x) = (x - a)^{k} \cdot g_{1}(x)$, где $k \in \mathbb{N}$,
+$f_{1}(x)$ и~$g_{1}(x)$ "--- непрерывные в~точке $a$~функции, то
+
+\begin{equation*}
+\displaystyle \lim \frac{f(x)}{g(x)} = \lim \frac{f_{1}(x)}{g_{1}(x)} = {f_{1}(a)}{g_{1}(a)}
+\end{equation*}
+
+при условии, что $g_{1}(a) \ne 0$.
+
+В~случае, когда $f(x)$ и~$g(x)$ "--- бесконечно большие при $x \to a$ функции,
+т.е.\ $\displaystyle \lim_{x \to a} f(x) = \infty$,
+$\displaystyle \lim_{x \to a} g(x) = \infty$, говорят, что частное 
+$\displaystyle \frac{f(x)}{g(x)}$ представляет из себя при $x \to a$
+неопределённость вида $\displaystyle \frac{\infty}{\infty}$.
+
+Например, если $f(x)$ и $g(x)$ "--- многочлен второй степени,
+т.е.\ $f(x) = ax^{2} + bx + c$, $g(x) = a_{1}x^{2} + b_{1}x + c_{1}$,
+где $a \ne 0$, $a_{1} \ne 0$, то
+
+\begin{equation*}
+\displaystyle \lim_{x \to \infty} \frac{f(x)}{g(x)} = 
+\lim_{x \to \infty}
+\frac
+{a + \frac{b}{x} + \frac{c}{x^{2}}}
+{a_{1} + \frac{b_{1}}{x} + \frac{c_{1}}{x^{2}}} = 
+\frac{a}{a_{1}}
+\end{equation*}
+
+\textbf{Задача 1.}\label{ex:4_4_1_1} Найти $\displaystyle \lim_{x \to a} F(x)$, если:
+
+\begin{enumerate} 
+\item $\displaystyle F(x) = \frac{2x^{2} - x - 1}{x^{2} - 3x + 2}$, $a = 1$;
+\item $\displaystyle F(x) = \frac{\sqrt{x + 7} - \sqrt{3}\sqrt{x - 1}}{x^{3} - 8}$, $a = 2$;
+\item $\displaystyle F(x) = \frac{\tg x - \sin x}{x^{3}}$, $a = 0$;
+\item $\displaystyle F(x) = \sqrt{x^{2} + 2x + 3} - \sqrt{x^{2} - x + 1}$.
+\end{enumerate}
+
+1) Разложив числитель и~знаменатель на множители, получим
+
+\begin{equation*}
+\displaystyle F(x) = \frac{(2x + 1)(x - 1)}{(x - 1)(x - 2)} =
+\frac{2x + 1}{x - 2} \; \text{при} \; x \ne 1.
+\end{equation*}
+
+\noindent
+Так как функция $\displaystyle \frac{2x + 1}{x - 2}$ непрерывна при $x = 1$, то
+
+\begin{equation*}
+\displaystyle \lim_{x \to 1} \frac{2x + 1}{x - 2} = \frac{2 \cdot 1 + 1}{1 - 2} = -3
+\end{equation*}
+
+\noindent
+Следовательно, $\displaystyle \lim_{x \to 1} F(x) = -3$.
+
+2) Умножим числитель и~знаменатель на $\sqrt{x + 7} + 3\sqrt{x - 1}$.
+Так как 
+
+\begin{multline*}
+\left( \sqrt{x + 7} - 3\sqrt{x - 1} \right)
+\left( \sqrt{x + 7} + 3\sqrt{x - 1} \right) = \\
+= \left( \sqrt{x + 7} \right)^{2} - \left(3\sqrt{x - 1} \right)^{2} = \\
+= x + 7 -9(x - 1) = 16 -8x = -8(x - 2), \; \text{a} \\
+x^{3} - 8 = (x -2)(x^{2} + 2x + 4), \; \text{то} \\
+F(x) = 
+\frac{-8(x - 2)}
+{(x -2)\left( x^{2} + 2x + 4 \right) \left(\sqrt{x +7} + 3\sqrt{x - 1} \right)} = \\
+= -\frac{8}
+{\left( x^{2} + 2x + 4 \right) \left( \sqrt{x +7} + 3\sqrt{x - 1} \right)}
+\; \text{при} \; x \ne 2.
+\end{multline*}
+
+Знаменатель полученной дроби "--- непрерывная функция, в~точке $x = 2$,
+предел которой при $x \to 2$ равен
+
+\begin{equation*}
+\left( 2^{2} + 2 \cdot 2 + 4 \right)
+\left( 2 + 7 +3\sqrt{2 - 1} \right) = 12 \cdot (3 + 3) = 72.
+\end{equation*}
+
+\noindent
+По свойствам пределов (\ref{sec:4_1_1})
+$\displaystyle \lim_{x \to 2} F(x) = \frac{-8}{72} = -\frac{1}{9}$.
+
+3) Так как
+
+\begin{gather*}
+\displaystyle \tg x - \sin x =
+\frac{\sin x}{\cos x} - \sin x =
+\frac{\sin(1 - \cos x)}{\cos x} =
+\frac{\sin x \cdot 2\sin^{2}\frac{x}{2}}{\cos x}, \; \text{то} \\
+\displaystyle F(x) = 
+\frac{\tg x - \sin x}{x^{3}} =
+\frac{\sin x}{x} \cdot \left( \frac{\sin \frac{x}{2}}{\frac{x}{2}} \right)^{2} \frac{1}{2\cos x}.
+\end{gather*}
+
+Пользуясь тем, что
+$\displaystyle \lim_{x \to 0} \frac{\sin x}{x} = 1$ (\ref{sec:4_3_2}), учитывая, что функция $\cos x$
+непрерывна при $x = 0$, и~применяя свойство пределов, получаем
+
+\begin{equation*}
+\displaystyle \lim_{x \to 0} F(x) =
+\left(
+\lim_{x \to 0} \frac{\sin x}{x}
+\right) \cdot
+\lim_{x \to 0} \left( \frac{\sin \frac{x}{2}}{\frac{x}{2}} \right)^{2} \cdot
+\lim_{x \to 0} \frac{1}{2 \cos x} = 
+1 \cdot 1 \cdot \frac{1}{2} = \frac{1}{2}.
+\end{equation*}
+
+4) Умножив и~разделив $F(x)$ на $\sqrt{x^{2} + 2x + 3} + \sqrt{x^{2} - x + 1 }$,
+получим
+
+\begin{multline*}
+\displaystyle F(x) =
+\frac{\left( x^{2} + 2x + 3 \right) - \left( x^{2} - x + 1 \right)}
+{\sqrt{x^{2} + 2x + 3} + \sqrt{x^{2} - x + 1}} = \\
+= \frac{3x + 2}{\sqrt{x^{2} + 2x + 3} + \sqrt{x^{2} - x + 1}} = \\
+= \frac{3 + \frac{2}{x}}
+{\sqrt{1 + \frac{2}{x} + \frac{3}{x^{2}}} + \sqrt{1 - \frac{1}{x} + \frac{1}{x^{2}}}}.
+\end{multline*}
+
+\noindent
+Так как предел числителя при $x \to \infty$ равен 3, а~предел знаменателя равен 2, то
+$\displaystyle \lim_{x \to \infty} F(x) = \frac{3}{2}$.
