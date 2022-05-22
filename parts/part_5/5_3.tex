@@ -1,0 +1,156 @@
+% 5_3 Производная сложной функции
+
+Покажем, что производная сложной функции находится по формуле
+
+\begin{equation}\label{eq:5_3_1}
+f(g(x))^\prime = f^\prime(g(x)) \cdot g^\prime(x)
+\end{equation}
+
+\begin{Th}\label{th:5_3_1}
+Пусть функция $g(x)$ имеет производную в точке $x$ и~функция $f(y)$ имеет производную
+в~точке $y=g(x)$. Тогда функция $F(x) = f(g(x))$ имеет производную в~точке $x$~и
+\begin{equation}\label{eq:5_3_2}
+F^\prime(x) = f^\prime(y) \cdot g^\prime(x).
+\end{equation}
+\end{Th}
+
+Рассмотрим равносильное утверждение
+
+\begin{equation*}
+\displaystyle \frac{F(x+h) - F(x)}{h} = \frac{f(g(x+h)) - f(g(x))}{h}
+\end{equation*}
+
+Обозначим $g(x+h) - g(x) = l$. Тогда $g(x+h) = g(x) + l$ и~так как $g(x) = y$,
+то $g(x+h) = y + l$. Если $l \ne 0$, это разностное отношение можно
+записать так:
+
+\begin{multline*}
+\displaystyle
+\frac{F(x+h) - F(x)}{h} =
+\frac{f(y+l) - f(y)}{h} = \\
+= \frac{f(y+l) - f(y)}{l} \cdot \frac{l}{h} =
+\frac{f(y+l) - f(y)}{l} \cdot \frac{g(x+h) - g(x)}{h}.
+\end{multline*}
+
+Заметим, что $l = g(x+h) - g(x) \to 0$ при $h \to 0$ в~силу непрерывности функции $g(x)$.
+Следовательно, по свойствам предела функции получаем
+
+\begin{multline*}
+\displaystyle F(x) =
+\lim_{h \to 0} \frac{F(x+h) - F(x)}{h} = \\
+= \lim_{l \to 0} \frac{f(y+l) - f(y)}{l} \cdot \lim_{h \to 0} \frac{g(x+h) - g(x)}{h} = \\
+= f^\prime(y) \cdot g^\prime(x).
+\end{multline*}
+
+Если при $h \to 0$ оказывается, что $l = g(x+h) - g(x) = 0$ при некоторых значениях $h$,
+то для этих значений $h$~и
+
+\begin{gather*}
+\displaystyle \frac{g(x+h) - g(x)}{h} = 0 \; \text{и} \\
+\displaystyle \frac{F(x+h) - F(x)}{h} = \frac{f(y+l) - f(y)}{h} = \frac{f(y) - f(y)}{h} = 0,
+\end{gather*}
+
+поэтому $g^\prime(x) = 0$ и~$F^\prime(x) = $0,
+т.е.\ и~в~этом случае верна формула \eqref{eq:5_3_2}.
+
+Напомним, что в~формуле \eqref{eq:5_3_2} $y = g(x)$, поэтому её можно записать
+в~виде \eqref{eq:5_3_1}.
+
+\textbf{Задача 1.}\label{ex:5_3_1} Найти производную функции $e^{x^{2}}$; $\sin^{5}x$.
+\begin{enumerate}
+\item Функция $e^{x^{2}}$ является сложной функцией $f(g(x))$,
+где $f(y) = e^{y}$, $g(x) = x^{2}$.
+Так как $f^\prime (y) = e^{y}$, $g^\prime (x) = 2x$, то $f^\prime (x^{2}) = e^{x^{2}}$
+и~по формуле \eqref{eq:5_3_1} получаем $\left( e^{x^{2}} \right)^{1} = e^{x^{2}} \cdot 2x$.
+
+\item Обозначая $f(y) = y^{5}$, $y = g(x) = \sin x$, получаем $f(g(x)) = \sin^{5} x$.
+Так как $f^\prime (y) = 5y^{4}$, $g^\prime (x) = \cos x$,
+то $f^\prime (\sin x) = 5 \sin^{4} x$ и~по формуле \eqref{eq:5_3_1}
+получаем $\left( \sin^{5} x \right)^\prime = 5 \sin^{4} x \cos x$.
+\end{enumerate}
+
+После решения нескольких упражнений на нахождение производной сложной функции по образцу
+решения задачи \ref{ex:5_3_1} вы увидите, что промежуточные обозначения можно выполнять
+в~уме, тогда запись получается короткой.
+
+Например,
+$\left( \sin (3 - 2x^{3} \right)^{1} =
+\cos \left( 3 - 2x^{3} \right) \cdot \left( 3 - 2x^{3} \right)^{1} = 
+\cos (3 - 2x^{3}) \cdot (-6x^{2}) = -6x^{2} \cos (3 - 2x^{3})$.
+
+Отметим, что если $g(x) = kx + b$, то по формуле \eqref{eq:5_3_1} имеем
+$\left( f(kx+b) \right)^\prime = f^\prime (kx+b)(kx+b)^\prime = kf^\prime(kx+b)$,
+т.е.\ получается знакомая нам формула
+
+\begin{equation}\label{eq:5_3_3}
+\left( f(kx+b) \right)^\prime = k f^\prime (kx+b)
+\end{equation}
+
+\textbf{Задача 2.}\label{ex:5_3_2} Доказать формулы
+
+\begin{gather}\label{eq:5_3_4}
+(\cos x)^\prime = -\sin x,\\
+\displaystyle ( \tg x )^\prime = \frac{1}{\cos^{2} x}, \\
+( \ctg x )^\prime = -\frac{1}{\sin^{2} x}.
+\end{gather}
+
+\begin{enumerate}
+\item Так как $\displaystyle \cos x = \sin \left(\frac{\pi}{2} - x \right)$,
+то по формуле \eqref{eq:5_3_3} получаем
+$\displaystyle (\cos x)^\prime =
+\left( \sin \left( \frac{\pi}{2} - x \right) \right)^\prime =
+-\cos \left( \frac{\pi}{2} - x \right) = -\sin x$.
+
+\item По формуле производной частного получаем
+
+\begin{multline*}
+\displaystyle (\tg x)^\prime = \left( \frac{\sin x }{\cos x} \right)^\prime =\
+\frac{(\sin x)^\prime \cos x - \sin x (\cos x)^\prime}{\cos^{2} x} = \\
+= \frac{\cos^{2} x + \sin^{2} x}{\cos^{2} x} = \frac{1}{\cos^{2} x}.
+\end{multline*}
+
+\item 
+\begin{multline*}
+\displaystyle (\ctg x)^\prime = \left( \frac{\cos x}{\sin x} \right)^\prime = 
+\frac{(\cos x)^\prime \sin x - \cos x (\sin x)}{\sin^{2} x} = \\
+= \frac{-\sin^{2} x - \cos^{2} x}{\sin^{2} x} = -\frac{1}{\sin^{2} x}.
+\end{multline*}
+
+\end{enumerate}
+
+\textbf{Задача 3.}\label{ex:5_3_3} Найти производную функции $a^{x}$,
+где $a >0$, $a \ne 1$.
+
+Функция $a^{x}$ определена при $x \in \mathbb{R}$ и~$a^{x} = e^{x \ln a}$.
+По формуле \eqref{eq:5_3_1} находим
+
+\begin{equation*}
+(a^{x})^\prime =
+\left( e^{x \ln a} \right)^\prime =
+e^{x \ln a} (x \ln a)^\prime =
+a^{x} \ln a. 
+\end{equation*}
+
+Итак,
+
+\begin{equation}\label{eq:5_3_4}
+(a^{x})^\prime = a^{x} \ln a.
+\end{equation}
+
+\noindent
+Например,
+$(2^{x})^\prime = 2^{x} \ln 2$,
+$\left( (0{,}3)^{x} \right)^\prime = (0{,}3)^{x} \ln 0{,}3$,
+$(\pi^{x})^\prime = \pi^{x} \ln \pi$.
+
+\textbf{Задача 4.}\label{ex:5_3_4} Найти наименьшее значение функции
+$f(x) = e^{x^{2} - 2x}$.
+
+Найдём производную
+$f^\prime (x) = \left( e^{x^{2} - 2x} \right)^\prime =
+e^{x^{2} - 2x} \cdot (x^{2} - 2x)^{1} = 2(x - 1)e^{x^{2} - 2x}$.
+
+На промежутке $x < 1$ функция убывает, так как на этом промежутке $f^\prime (x) < 0$.
+На промежутке $x > 1$ функция возрастает, так как на этом  промежутке $f^\prime (x) > 0$.
+Следовательно, $x = 1$ "--- точка минимума и~в~ней функция $f(x)$
+принимает наименьшее значение равное $f(1) = e^{-1}$.
