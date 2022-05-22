@@ -1,0 +1,356 @@
+% 5_1 Производная произведения и частного
+
+Напомним определение производной функции.
+
+Пусть функция $f(x)$ определена на некотором интервале.
+Рассмотрим разностное отношение
+
+\begin{equation*}
+\displaystyle \frac{f(x + h) - f(x)}{h},
+\end{equation*}
+
+\noindent
+в~котором $x$ "--- фиксированная точка данного интервала, а~$h$ меняется так,
+что $h \ne 0$ и~точки $x + h$ также принадлежит данному интервалу.
+Тогда это разностное отношение является функцией, аргумента $h$.
+Если существует предел
+
+\begin{equation*}
+\displaystyle \lim_{h \to 0} \frac{f(x + h) - f(x)}{h},
+\end{equation*}
+
+\noindent
+то этот предел называют производной функции $f(x)$ в~точке $x$
+и~обозначают $f^\prime(x)$, т.е.\
+
+\begin{equation*}
+\displaystyle f^\prime(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+\end{equation*}
+
+Функцию $f(x)$, имеющую производную в~точке $x$, называют дифференцируемой в~этой точке.
+Если функция $f(x)$ имеет производную в~каждой точке интервала, то её называют
+дифференцируемой на этом интервале.
+
+С~помощью определения производной вы умеете доказывать формулы
+
+\begin{gather*}
+(x)^\prime = 1, \\
+(x^{2})^\prime = 2x, \\
+(x^{3})^\prime = 3x^{2}, \\
+(kx + b)^\prime = k, \\
+(C)^\prime = 0,
+\end{gather*}
+
+\noindent
+где вместо букв $k$, $b$, $C$ можно подставить любые, но фиксированные
+(не зависящие от $x$) числа.
+Например, $(2x + 4)^\prime = 2$, $(1 - 5x)^\prime = -5$, $(3)^\prime = 0$.
+В~этом случае говорят, что $k$, $b$, $C$ "--- постоянные,
+а~для того, чтобы подчеркнуть, что это любые числа, иногда их называют
+произвольными постоянными.
+
+Вы знаете, что $(\sin x)^\prime = \cos x$, $\left( e^{x} \right)^\prime = e^{x}$,
+но эти формулы не были доказаны. Докажем их.
+
+1) По определению  производной
+
+\begin{multline*}
+\displaystyle (\sin x)^\prime = \lim_{h \to 0} \frac{\sin (x+h) - \sin x}{h} = \\
+= \lim_{h \to 0} \frac{2\sin\frac{h}{2} \cos \left( x + \frac{h}{2} \right)}{h} = \\
+= \lim_{h \to 0}
+\left[
+    \frac{\sin \frac{h}{2}}{\frac{h}{2}} \cdot
+    \cos \left( x + \frac{h}{2} \right) 
+\right].
+\end{multline*}
+
+\noindent
+Так как $\displaystyle \lim_{h \to 0} \frac{\sin \frac{h}{2}}{\frac{h}{2}} = 1$
+и~$\displaystyle \lim_{h \to 0} \cos \left( x + \frac{h}{2} \right) = \cos x$,
+то по свойству предела произведения двух функций получаем
+
+\begin{multline*}
+\displaystyle \lim_{h \to 0} 
+\left[
+\frac{\sin \frac{h}{2}}{\frac{h}{2}} \cdot \cos \left( x + \frac{h}{2} \right) 
+\right] = \\
+= \lim_{h \to 0}
+    \frac{\sin \frac{h}{2}}{\frac{h}{2}} \cdot \lim \cos \left( x + \frac{h}{2} \right) = \\
+= 1 \cdot \cos x = \cos x,
+\end{multline*}
+
+2) По определению производной
+
+\begin{multline*}
+\displaystyle \left( e^{x} \right) = \lim_{h \to 0} \frac{e^{x+h} - e^{x}}{h} = 
+\lim_{h \to 0} \left[ e^{x} \cdot \frac{e^{h} - 1}{h} \right] = \\
+= e^{x} \lim_{h \to 0} \frac{e^{h} - 1}{h} = e^{x}  \cdot 1 = e^{x}.
+\end{multline*}
+
+Например, $\left( 5 \sin x - 3 e^{x} \right)^\prime =
+(5 \sin x)^\prime + (-3e^{x})^\prime =
+5(\sin x)^\prime + (-3)(e^{x})^\prime = 5 \cos x -3 e^{x}$.
+
+Введём правила дифференцирования произведения и~частного двух функций.
+
+\begin{Th}\label{th:5_1_1}
+Если функции $f(x)$ и~$g(x)$ дифференцируемы, то функция $f(x) \cdot g(x)$
+также дифференцируема и справедливы формулы
+
+\begin{equation}\label{eq:5_1_1}
+\left( f(x) \cdot g(x) \right)^\prime = 
+f^\prime(x) \cdot g(x) + f(x) \cdot g^\prime(x).
+\end{equation}
+\end{Th}
+
+Обозначим $f(x)g(x) = F(x)$ и~разность $F(x+h)- F(x)$ преобразуем так:
+
+\begin{multline*}
+F(x+h) - F(x) = f(x+h) \cdot g(x+h) - f(x) \cdot g(x) = \\
+= f(x+h) g(x+h) - f(x) g(x+h) + f(x) g(x+h) - f(x) g(x) = \\
+= g(x+h)[f(x+h) - f(x)] + f(x)\cdot [g(x+h) - g(x)].
+\end{multline*}
+
+\noindent
+Тогда
+
+\begin{multline}\label{eq:5_1_2}
+\displaystyle \frac{F(x+h) - F(x)}{h} = \\
+= g(x+h) \cdot \frac{f(x+h) - f(x)}{h} + f(x) \cdot \frac{g(x+h) - g(x)}{h}.
+\end{multline}
+
+В этом равенстве перейдём к~пределу при $h \to 0$.
+Вы знаете, что если функция дифференцируема, то она непрерывна,
+поэтому
+
+\begin{gather*}
+\displaystyle \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} = f^\prime(x), \\
+\displaystyle \lim_{h \to 0} \frac{g(x+h) - g(x)}{h} = g^\prime(x). 
+\end{gather*}
+
+Следовательно, из равенства \eqref{eq:5_1_2} при $h \to 0$ получаем
+$F^\prime (x) = f^\prime(x)g(x) + f(x)g^\prime(x)$.
+
+Например, по формуле \eqref{eq:5_1_1} находим:
+
+\begin{gather*}
+\left( xe^{x} \right)^\prime =
+    (x)^\prime e^{x} + x(e^{x})^\prime = e^{x} + xe^{x} = (1+x)e^{x}; \\
+\left( x^{2} \sin x \right)^\prime = 
+    \left( x^{2} \right)^\prime \sin x + x^{2}(\sin x)^\prime = 2x \sin x + x^{2} \cos x; \\
+\left( e^{x} \sin x \right)^\prime =
+    \left( e^{x} \right)^\prime \sin x + e^{x} (\sin x)^\prime = \\
+    = e^{x} \sin x + \left( e^{x} \cos x \right) = (\sin x + \cos x) e^{x}.
+\end{gather*}
+
+С~помощью формулы \eqref{eq:5_1_1} можно находить производную произведения трёх функций,
+четырёх функций и т.д.
+
+\textbf{Задача 1.}\label{ex:5_1_1} Найти производную функции $xe^{x} \cdot \sin x$.
+
+\begin{multline*}
+(xe^{x} \sin x)^\prime = (xe^{x})^\prime \sin x + xe^{x}(\sin x)^\prime = \\
+= \left[ (x)^\prime e^{x} + x(e^{x})^\prime \right] \sin x + xe^{x} \cos x = \\
+= \left( e^{x} + xe^{x} \right) \sin x + xe^{x} \cos x.
+\end{multline*}
+
+\textbf{Задача 2.}\label{ex:5_1_2} Доказать, что при всех $x$ справедлива формула
+
+\begin{equation}\label{eq:5_1_3}
+\left( x^{n} \right)^\prime = nx^{n-1},
+\end{equation}
+
+\noindent
+где $n$ "--- натуральное число, $n \geqslant 2$.
+
+Доказательство проведём методом математической индукции.
+
+При $n = 2$ формула \eqref{eq:5_1_3} верна:
+$\left( x^{2} \right)^\prime = 2x^{1} = 2 \cdot x^{2 - 1}$.
+
+Докажем, что если формула \eqref{eq:5_1_3} верна для натурального числа $n$,
+то она верна и для $n+1$, т.е.\ верна формула
+$\left( x^{n+1} \right)^\prime = (n+1)x^{n}$.
+
+Применяя формулы \eqref{eq:5_1_1} и~\eqref{eq:5_1_3}, получаем
+
+\begin{equation*}
+(x^{n+1})^\prime = (x^{n} \cdot x)^\prime =
+(x^{n})^\prime \cdot x + x^{n} \cdot (x)^\prime =
+nx^{n-1} \cdot x + x^{n} \cdot 1 = (n + 1) x^{n}.
+\end{equation*}
+
+Итак, формула \eqref{eq:5_1_3} верна для $n=2$ и~доказано,
+что если формула \eqref{eq:5_1_3} верна для натурального числа $n$,
+то она верна и~следующего за ним числа $n+1$.
+Следовательно, формула \eqref{eq:5_1_3} верна для $n=3$, $n=4$ и вообще для любого
+натурального $n$.
+
+Например, по формуле \eqref{eq:5_1_3} получаем
+$\left( x^{5} \right)^\prime  = 5x^{4}$,
+$\left( x^{12} \right)^\prime  = 12x^{11}$.
+
+\textbf{Задача 3.}\label{ex:5_1_3} Найти наибольшее и~наименьшее значение функции
+$f(x) = xe^{x}$ на отрезке $[-2; 1]$.
+
+Воспользуемся знакомым нам алгоритмом.
+
+1) Находим значения функции на концах данного отрезка:
+
+\begin{equation*}
+f(-2) = -2e^{-2}, \; f(1) = e
+\end{equation*}
+
+2) Найдём стационарные точки функции $f(x)$. Так как $(xe^{x}) = (1+x)e^{x}$,
+то $f^\prime (x) = 0$ только при $x = -1$.
+Точка $x = -1$ принадлежит интервалу $(-2; 1)$ и~$f(-1) = -e^{-1}$.
+
+3) Сравним числа $f(-2)$, $f(-1)$ и~$f(1)$, т.е.\ числа $-2e^{-2}$, $-e^{-1}$ и~$e$.
+Наибольшее из них число $e$, наименьшее $-e^{-1}$.
+
+Ответ: наибольшее значение функции $xe^{x}$ на отрезке $[-2; 1]$ равно $e$,
+наименьшее равно $-e^{-1}$.
+
+\begin{Th}\label{th:5_1_2}
+Если функции $f(x)$ и~$g(x)$ дифференцируемы и~$g(x) \ne 0$,
+то функция $\displaystyle \frac{f(x)}{g(x)}$ также дифференцируема
+и~справедлива формула
+
+\begin{equation}\label{eq:5_1_4}
+\displaystyle 
+\left(
+\frac{f(x)}{g(x)}
+\right)^\prime =
+\frac{f^\prime(x)g(x) - f(x)g^\prime(x)}{g^{2}(x)}.
+\end{equation}
+\end{Th}
+
+Сначала докажем, что функция $\displaystyle F(x) = \frac{1}{g(x)}$ дифференцируема
+и~найдём её производную. Преобразуем разность
+
+\begin{equation*}
+F(x+h) - F(x) =
+\frac{1}{g(x+h)} - \frac{1}{g(x)} =
+\frac{g(x) - g(x+h)}{g(x) \cdot g(x+h)}.
+\end{equation*}
+
+\noindent
+Тогда
+
+\begin{equation*}
+\displaystyle \frac{F(x+h) - F(x)}{h} =
+\frac{g(x) - g(x+h)}{hg(x) \cdot g(x+h)} =
+-\frac{1}{g(x) \cdot g(x+h)} \cdot \frac{g(x+h)- g(x)}{h}.
+\end{equation*}
+
+Переходя к переделу в этом равенстве при $h \to 0$, получаем
+$\displaystyle F^\prime(x) = -\frac{g^\prime(x)}{g^{2}(x)}$, т.е.\
+
+\begin{equation}\label{eq:5_1_5}
+\displaystyle 
+\left(
+\frac{1}{g(x)}
+\right)^\prime = 
+-\frac{g^\prime(x)}{g^{2}(x)}.
+\end{equation}
+
+Итак, функция $\displaystyle \frac{1}{g(x)}$ дифференцируема,
+а функция $f(x)$ дифференцируема по условию теоремы \ref{th:5_1_2}.
+Следовательно, по теореме \ref{th:5_1_1}
+функция $\displaystyle \frac{f(x)}{g(x)} = f(x) \cdot \frac{1}{g(x)}$
+также дифференцируема и по формулам \eqref{eq:5_1_1}, \eqref{eq:5_1_5}, 
+находим, используя формулы \eqref{eq:5_1_1} и~\eqref{eq:5_1_5} получаем
+
+\begin{multline*}
+\displaystyle
+\left( \frac{f(x)}{g(x)} \right)^\prime =
+\left( f(x) \cdot \frac{1}{g(x)} \right)^\prime =
+f^\prime(x) \cdot \frac{1}{g(x)} + f(x) \left( \frac{1}{g(x)} \right)^\prime = \\
+= f^\prime(x) \cdot \frac{1}{g(x)} - f(x) \cdot \frac{g^\prime(x)}{g^{2}(x)} =
+\frac{f^\prime(x)g(x) - f(x)g^\prime(x)}{g^{2}(x)}.
+\end{multline*}
+
+Отметим, что формулу \eqref{eq:5_1_5} можно получить из формулы \eqref{eq:5_1_4}
+при $f(x) = 1$, однако при решении многих задач для сокращения вычислений
+полезно помнить и формулу \eqref{eq:5_1_5}.
+
+Например, по формуле \eqref{eq:5_1_5} находим
+
+\begin{equation*}
+\displaystyle
+\left( \frac{1}{\left( x^{2} + 1 \right)} \right)^\prime = 
+-\frac{\left( x^{2} + 1 \right)^\prime}{\left( x^{2} + 1 \right)^{2}} =
+-\frac{2x}{\left( x^{2} + 1 \right)^{2}};
+\end{equation*}
+
+\noindent
+по формуле \eqref{eq:5_1_4} находим:
+
+\begin{equation*}
+\displaystyle
+\left( \frac{e^{x}}{x} \right)^\prime = 
+\frac{\left(e^{x}\right)x - e^{x}(x)^\prime}{x^{2}} =
+\frac{e^{x}x - e^{x} \cdot 1}{x^{2}} =
+\frac{(x-1)e^{x}}{x^{2}};
+\end{equation*}
+
+\begin{equation*}
+\displaystyle
+\left( \frac{e^{x}}{\sin x} \right)^\prime =
+\frac{\left( e^{x} \right)^\prime \sin x - e^{x}(\sin x)^\prime}{\sin^{2} x} =
+\frac{e^{x} \sin x - e^{x} \cos x}{\sin^{2} x} =
+\frac{\left( \sin x - \cos x \right) e^{x}}{\sin^{2} x}.
+\end{equation*}
+
+\textbf{Задача 4.}\label{ex:5_1_4} Доказать, что при $x \ne 0$ справедлива формула
+
+\begin{equation}\label{eq:5_1_6}
+\displaystyle
+\left( \frac{1}{x^{n}} \right)^\prime = -\frac{n}{x^{n+1}}
+\end{equation}
+
+\noindent
+где $n$ "--- натуральное число.
+
+По формулам \eqref{eq:5_1_5} и~\eqref{eq:5_1_3} получаем
+
+\begin{equation*}
+\displaystyle
+\left( \frac{1}{x^{n}} \right)^\prime =
+-\frac{\left( x^{n} \right)^\prime}{\left( x^{n} \right)^{2}} =
+-\frac{nx^{n-1}}{x^{2n}} = -\frac{n}{x^{n+1}}.
+\end{equation*}
+
+Например, по формуле \eqref{eq:5_1_6} получаем
+
+\begin{equation*}
+\displaystyle
+\left( \frac{1}{x^{3}} \right)^\prime = -\frac{3}{x^{4}}, \;
+\left( \frac{1}{x^{12}} \right)^\prime = -\frac{12}{x^{13}}.
+\end{equation*}
+
+\textbf{Задача 5.}\label{ex:5_1_5} Найти точки экстремума функции
+
+\begin{equation*}
+\displaystyle f(x) = \frac{x}{x^{2} + 1}.
+\end{equation*}
+
+Найдём производную:
+
+\begin{multline*}
+\displaystyle
+f^\prime(x) = 
+\frac
+{(x)^\prime \left( x^{2} + 1 \right)- x\left( x^{2} + 1 \right)^\prime}
+{\left( x^{2} + 1 \right)^{2}} = 
+\frac{1 \cdot \left( x^{2} + 1 \right) - x \cdot 2x}{\left( x^{2} + 1 \right)^{2}} = \\
+= \frac{1 - x^{2}}{\left( x^{2} + 1 \right)^{2}} = 
+\frac{(1 - x)(1 + x)}{\left( x^{2} + 1 \right)^{2}}.
+\end{multline*}
+
+Приравнивая производную к~нулю, находим две стационарные точки
+$x_{1} = -1$ и~$x_{2} = 1$.
+
+При переходе через точку $x_{1} = -1$ производная меняет знак с~<<->> на <<+>>
+Поэтому $x_{1} = -1$ "--- точка минимума. При переходе через точку $x_{2} = 1$
+производная меняет знак с~<<+>> на <<->>, поэтому $x_{2} = 1$ "--- точка максимума.
