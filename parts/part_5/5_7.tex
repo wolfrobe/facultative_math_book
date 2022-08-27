@@ -1,0 +1,107 @@
+% 5_7 Таблица первообразных
+
+Напомним определение первообразной.
+
+Функция $F(x)$ называется первообразной для функции $f(x)$ на некотором промежутке,
+если для всех $x$ из этого промежутка
+
+\begin{equation*}
+F^\prime(x) = f(x).
+\end{equation*}
+
+Из этого определения следует, что с помощью таблицы производных (пар.4)
+можно составить следующую таблицу первообразных.
+
+% \begin{table}\label{tbl:5_7_1}
+% $x^{p}$ & $\displaystyle \frac{x^{p+1}}{p+1} + C$ \\ 
+% $\displaystyle \frac{1}{x}$ & $\ln |x| + C$ \\
+% $e^{x}$ & $\displaystyle \frac{a^{x}}{\ln a} + C$ \\
+% $\sin x$ & $-\cos x + C$ \\
+% $\cos x$ & $\sin x + C$ \\
+% $\displaystyle \frac{1}{\sin^{2} x}$ & $-\ctg x + C$ \\
+% $\displaystyle \frac{1}{\cos ^{2} x} & $\tg x + C$ \\
+% $\displaystyle \frac{1}{\sqrt{1 - x^{2}}}$ & $\arcsin x + C$ \\
+% $\displaystyle \frac{1}{a + x^{2}}$ & $\arctg x + C$
+% \end{table}
+
+Каждая из формул этой таблицы верна на любом промежутке, на котором имеют смысл
+её левая и правая части. Например, на промежутке $x < 0$ определены функции
+$\displaystyle \frac{1}{x}$ и~$\ln |x|$, причём, при $x < 0$ имеем
+$\displaystyle (\ln |x|)^\prime = (\ln (-x))^\prime = \frac{1}{x} \cdot (-x) = \frac{1}{x}$.
+Следовательно, на этом промежутке функция $\ln (x)$ является первообразной для функции
+$\displaystyle \frac{1}{x}$. На промежутке $x > 0$ функция $\ln (x)$ является
+первообразной для функции $\displaystyle \frac{1}{x}$, так как при $x > 0$ имеем
+$\displaystyle \left( \ln |x| \right)^\prime = (\ln x) = \frac{1}{x}$.
+
+\textbf{Задача 1.}\label{ex:5_7_1} Найти площадь фигуры, изображённой
+на рисунке \ref{fig:5_7_18}.
+
+\begin{figure}\label{fig:5_7_18}
+% стр 200 рис 18
+\end{figure}
+
+Вы знаете, что площадь данной криволинейной трапеции равна интегралу:
+
+\begin{equation*}
+\displaystyle S = \int\limits_{0}^{1} \frac{1}{1 + x^{2}} dx.
+\end{equation*}
+
+Так как функция $\arctg x$ является первообразной для функции
+$\displaystyle \frac{1}{1 + x^{2}}$; то по формуле Ньютона-Лейбница находим
+
+\begin{equation*}
+\displaystyle S = \int\limits_{0}^{1} \frac{1}{1 + x^{2}} dx = 
+\left . \arctg x \right|_{0}^{1} = \arctg 1 - \arctg 0 = \frac{\pi}{4}.
+\end{equation*}
+
+Напомним правила нахождения первообразных.
+
+Пусть $F(x)$ и~$G(x)$ "--- первообразные соответственно для функций $f(x)$ и~$g(x)$
+на некотором промежутке, т.е.\
+
+\begin{equation*}
+F^\prime (x) = f(x), \quad G^\prime (x) = g(x),
+\end{equation*}
+
+\noindent
+и~пусть $a$, $b$, $k$ "--- постоянные, $k \ne 0$. Тогда:
+
+\begin{enumerate}
+\item\label{lst:5_7_1_1} $F(x) + G(x)$ "--- первообразная для функций $f(x) + g(x)$;
+\item\label{lst:5_7_1_2} $a\,F(x)$ "--- первообразная для функции $a\,f(x)$;
+\item\label{lst:5_7_1_3} $\displaystyle \frac{1}{k}F(kx+ b)$ "--- первообразная для функции $f(kx + b)$.
+\end{enumerate}
+
+Отметим, что из первых двух правил следует, что $aF(x) + bG(x)$ "--- первообразная
+для функции $af(x) + bg(x)$.
+
+Приведём примеры применения этих правил и~таблицы первообразных.
+
+\textbf{Задача 2.}\label{ex:5_7_2} Найти первообразную $F(x)$ для функции $f(x)$:
+
+1) $\displaystyle f(x) = \frac{2}{\sqrt{1 - x^{2}}} - \frac{3}{\cos^{2} x}$.
+
+По таблице первообразных находим: $\arcsin x$ "--- первообразная для функции
+$\displaystyle \frac{1}{\sqrt{1 - x^{2}}}$, $\tg x$ "--- первообразная для функции
+$\displaystyle \frac{1}{\cos^{2} x}$. По правилам нахождения первообразных
+$F(x) = 2\arcsin x - 3\tg x + C$.
+
+2) $f(x) = \tg^{2} x$.
+
+Так как 
+$\displaystyle f(x) = \tg^{2} x =
+\frac{\sin^{3} x}{\cos^{2} x} = \frac{1 - \cos^{2} x}{\cos^{2} x} = 
+\frac{1}{\cos^{2} x} - 1$,
+то $F(x) = \tg x - x + C$.
+
+3) $\displaystyle f(x) = \frac{1}{4x^{2} - 12x + 10 }$.
+
+Выделяя полный квадрат в~знаменателе, получаем
+
+\begin{equation*}
+\displaystyle f(x) = \frac{1}{4x^{2} - 12x + 9 + 1} = \frac{1}{1 + (2x - 3)^{2}}
+\end{equation*}
+
+Так как $\arctg x$ "--- первообразная функции $\displaystyle \frac{1}{1 + x^{2}}$,
+то по правилу \ref{lst:5_7_1_3} находим
+$\displaystyle F(x) = \frac{1}{2} \arctg (2x - 3) + C$.
