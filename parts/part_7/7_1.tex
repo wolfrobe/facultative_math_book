@@ -1,0 +1,454 @@
+% 7 Комплексные числа и их применение
+% 7_1 Некоторые сведения о комплексных числах
+
+\subsection{Определения для справок}
+Выпишем для удобства некоторые уже известные вам определения:
+
+1)\label{lst_8_1_1} комплексными числами называются выражения вида $z = a + bi$,
+где $a$ и~$b$ "--- действительные числа, а~$i$ "--- некоторый символ, удовлетворяющий
+условию $i^{2} = -1$. Число $a$ называется действительной частью числа $a + bi$,
+а~число $b$ "--- его мнимой частью. Для действительной и~мнимой частей комплексного
+числа $z = a + bi$ обычно используют следующие обозначения:
+
+\begin{equation}\label{eq:7_1_1}
+a = Re \, z, \; b = Im \, z.
+\end{equation}
+
+\noindent
+Запись комплексного числа в~виде $z = a + bi$ называется алгебраической формой этого числа.
+
+2)\label{lst:7_1_2} Комплексное число $\overline{z} = a + bi$ называется сопряжённым
+(комплексно) комплексному числу $z = a + bi$.
+
+3)\label{lst:7_1_3} Модулем комплексного числа $z = a + bi$ называется число
+$\sqrt{a^{2} + b^{2}}$ и~обозначается $|z|$:
+
+\begin{equation}\label{eq:7_1_1}
+|z| = | a + bi | = \sqrt{a^{2} + b^{2}}.
+\end{equation}
+
+\noindent
+Из определения модуля комплексного числа непосредственно вытекает следующее равенство:
+
+\begin{equation}\label{eq:7_1_3}
+z\overline z = (a + bi)(a - bi) = a^{2} - (bi)^{2} = a^{2} + b^{2} = |z|^{2},
+\end{equation}
+
+\noindent
+т.е.\ $z\overline{z} = |z|^{2}$.
+
+4)\label{lst:7_1_4} Запись комплексного числа $z$ не равного нулю в~виде
+
+\begin{equation}\label{eq:7_1_4}
+z = r(\cos \phi + i\sin\phi),
+\end{equation}
+
+\noindent
+где $r = |z|$ и~$\phi$ "--- угол между положительной полуосью $OX$ и~вектором
+$\overrightarrow{0Z}$ (рис.\ \ref{fig:7_1_1} называется
+тригонометрической формой комплексного числа.
+
+\begin{figure}\label{fig:7_1_1}
+% стр 236 рис 1 
+\end{figure}
+
+Число $\phi$ называется аргументом комплексного числа и~обозначается $\arg \, z$.
+
+У каждого комплексного числа $z \ne 0$имеется бесконечно много аргументов:
+если $\phi_{0}$ "--- какой-либо аргумент числа $z$, то все остальные можно найти по формуле
+$\phi = \phi_{0} + 2K\pi$, где $K$ "--- любое целое число. Среди всех аргументов
+комплексного числа $z$ имеется один и~только один, удовлетворяющий неравенствам
+$0 \leqslant \phi < 2\pi$. Это значение $\phi$ аргумента $z$ называется главным
+и~обозначается $\arg \, z$.
+
+$Arg z$ и~$\arg z$ связаны соотношением:
+
+\begin{gather}\label{eq:7_1_5}
+rg z = \arg z + 2\pi K, \;  K = 0, \pm 1, \pm 2 \dots \\
+0 \leqslant \arg z < 2\pi .
+\end{gather}
+
+Для числа $z = 0$ аргумент и~тригонометрическая форма не определяются.
+
+5)\label{lst:7_1_5} Для любого комплексного числа $z \ne 0$ и~любого целого $n$
+справедлива формула Муавра:
+
+\begin{equation}\label{eq:7_1_5}
+z^{n} = \left[ (\cos \phi + i \sin \phi) \right]^{n} =
+r^{n} (\cos n\phi + i \sin n\phi)
+\end{equation}
+
+
+\subsection{Комплексные координаты точки и~вектора на комплексной плоскости}
+Пусть $z$ "--- точка на комплексной плоскости (рис.\ \ref{fig:7_1_2}).
+Назовём комплексное число $z = a + bi$ комплексной координатой точки $z$ 
+(комплексное число и~точка $z$, изображающая это число, обозначены одной и той же буквой).
+
+Комплексное число $z = a + bi$ может также изображаться вектором $\overrightarrow{0z}$
+с~координатами $a$ и~$b$.
+
+\begin{figure}\label{fig:7_1_2}
+% стр 253 рис 2
+\end{figure}
+
+Рассмотрим произвольный вектор $\overrightarrow{0_{1}z_{1}}$, равный вектору $\overrightarrow{0z}$
+(рис.\ \ref{fig:7_1_2}). Из курса геометрии известно, что равные векторы имеют
+равные координаты, поэтому координатами вектора $\overrightarrow{0_{1}Z}$ являются числа $a$, $b$.
+Вектору $\overrightarrow{0_{1}z_{1}}$ сопоставим то же самое комплексное число $z = a + bi$,
+которое назовем комплексной координатой вектора $\overrightarrow{0_{1}z_{1}}$.
+
+Таким образом, приходим к~следующему определению: комплексной координатой вектора
+$\overrightarrow{AB}(a, b)$ называется комплексное число $z = a + bi$.
+
+Так как при сложении и вычитании векторов их соответствующие координаты складываются
+и~вычитаются, то то же самое справедливо и для их комплексных координат.
+Точнее, пусть векторы $\overrightarrow{0A}$ и~$\overrightarrow{0B}$ имеют комплексные координаты
+$z_{1}$ и~$z_{2}$, а вектор $\overrightarrow{0C}$ имеет комплексную координату $z$.
+Тогда $z = z_{1} + z_{2}$. Геометрически это означает, что вектор $z$ "--- это диагональ
+параллелограмма, построенного на векторах $z_{1}$ и~$z_{2}$ (рис.\ \ref{fig:7_1_3}).
+Отсюда следует, что $|z_{1} + z_{2}| \leqslant |z_{1}| + |z_{2}|$.
+
+\begin{figure}\label{fig:7_1_3}
+% стр 237 рис 3
+\end{figure}
+
+Пусть $z$ "--- комплексная координата вектора
+$\overrightarrow{AB} = \overrightarrow{0A} - \overrightarrow{0A}$. Тогда $z = z_{2} - z_{1}$.
+Числа $z_{1}$ и~$z_{2}$ являются комплексными координатами точек $A$ и~$B$,
+Поэтому комплексная координата вектора равна разности между комплексными координатам
+его конца и~начала (рис.\ \ref{fig:7_1_4}.
+
+\begin{figure}\label{fig:7_1_4}
+% стр 238 рис 4
+\end{figure}
+
+\textbf{Задача 1.}\label{ex:7_1_1} Найти комплексную координату середины отрезка $AB$,
+если комплексные координаты его концов равны $z_{1}$ и~$z_{2}$ соответственно.
+
+Обозначим середину отрезка $AB$ через $0_{1}$ (рис.\ \ref{fig:7_1_5}).
+Тогда $\overrightarrow{00_{1}} = \overrightarrow{0A} + \overrightarrow{A0_{1}} =
+\overrightarrow{0A} + \dfrac{1}{2}\overrightarrow{AB}$. Учитывая, что комплексная
+координата $AB$ равна $z_{2} - z_{1}$, получим
+$z = z_{1} + \dfrac{1}{2}(z_{2} - z_{1} = \dfrac{z_{1} + z_{2}}{2}$.
+
+\begin{figure}\label{fig:7_1_5}
+% стр 238 рис 5
+\end{figure}
+
+
+\subsection{Показательная форма комплексного числа.}
+Положим по определению
+
+\begin{equation}\label{eq:7_1_7}
+e^{i\phi} = \cos \phi + i \sin \phi.
+\end{equation}
+
+\noindent
+Тогда любое комплексное число $z \ne 0$ можно записать в~виде
+
+\begin{equation}\label{eq:7_1_8}
+z = r ( \cos \phi + i \sin \phi ) = r e^{i\phi}.
+\end{equation}
+
+\noindent
+Эта форма записи комплексного числа называется показательной или экспоненциальной.
+Будем рассматривать её как сокращённую запись тригонометрической формы комплексного числа.
+Таким образом, если $z_{1} = r_{1}e^{i\phi_{1}}$ и~$z_{1} = r_{1}e^{i\phi_{1}}$, то 
+
+\begin{gather}
+z_{1}z_{2} = r_{1}e^{i\phi_{1}} \cdot r_{2}e^{i\phi_{2}} =
+    r_{1}r_{2}e^{i(\phi_{1} + \phi_{2})}, \label{eq:7_1_9} \\
+\dfrac{z_{1}}{z_{2}} = \dfrac{r_{1}e^{i\phi_{1}}}{r_{1}e^{i\phi_{1}}} =
+    \dfrac{r_{1}}{r_{2}} \, e^{i(\phi_{1} - \phi_{2})}. \label{eq:7_1_10} 
+\end{gather}
+
+\noindent
+Заметим также, что из \eqref{eq:7_1_10} следует $e^{-i\phi} = \dfrac{1}{e^{i\phi}}$.
+
+Дадим геометрическое истолкование операции умножения комплексных чисел.
+Пусть $z = r e^{i\alpha}$, $с = \rho e^{i\beta}$.
+Тогда $W = cZ = \rho r e^{i(\alpha + \beta)}$.
+Если $z$, $c$ и~$W$ изображаются на комплексной плоскости векторами 
+$\overrightarrow{0A}$, $\overrightarrow{0B}$ и~$\overrightarrow{0D}$ соответственно
+(рис.\ \ref{fig:7_1_6}), то учитывая что $|W| = \rho r$ и~$Arg \, W = \alpha + \beta$
+находим $|\overrightarrow{0D}| = |W| = \rho r = \rho \cdot |\overrightarrow{0A}|$,
+поэтому вектор $\overrightarrow{0D}$ получается из вектора $\overrightarrow{0A}$ 
+поворотом на угол $\beta$ и~растяжением с~коэффициентом $\rho$.
+
+\begin{figure}\label{fig:7_1_6}
+% стр 239 рис 6
+\end{figure}
+
+\noindent
+Обратно, пусть вектора $\overrightarrow{0A}$ и~$\overrightarrow{0B}$ имеют
+комплексные координаты $z = r e^{i\alpha}$ и~$c = \rho e^{i\beta}$ соответственно.
+Повернём вектор $\overrightarrow{0A}$ вокруг точки $0$ на угол $\beta$
+(если $\beta < 0$, то вращение происходит по часовой стрелке)
+и~растянем его с~коэффициентом растяжения $\phi$. Полученный вектор $\overrightarrow{0D}$ 
+имеет комплексную координату $W$, $|W| = |\overrightarrow{0B}| = \rho r$,
+$Arg W = \alpha + \beta$. 
+Отсюда $W = (\rho r)e^{i(\alpha + \beta)} = (\rho e^{i\beta}) \cdot (r e^{i\alpha} = cz$.
+Таким образом, умножение комплексного числа $z$ на комплексное число $C$ равносильно
+повороту числа $z$ (т.е.\ вектора $\overrightarrow{0A}$, изображающего число $z$)
+на угол $\beta = Arg c$ с~последующим растяжением с~коэффициентом растяжения равным
+$|c|$.
+
+Отметим, что треугольники $0A1$ и~$0BD$ на рис.\ \ref{fig:7_1_6} подобны с коэффициентом
+подобия $\rho$.
+
+Обозначим через $R_{2}(z)$ вектор, полученный из вектора $z$ поворотом вокруг точки $0$
+на угол $\alpha$ (против часовой стрелки, если $\alpha > 0$ и по часовой стрелке,
+если $\alpha < 0$).
+
+
+\subsection{Корни из комплексных чисел.}
+Применяя формулу Муавра, легко найти комплексные корни $n-1$ степени из произвольного
+комплексного числа $z \ne 0$. Пусть $W = \sqrt[\scriptstyle n]{z}$. Тогда
+
+\begin{equation}\label{eq:7_1_12}
+W^{n} = z
+\end{equation}
+
+\noindent
+и~все корни $n$-й степени из $z$ являются решениями уравнения \eqref{eq:7_1_12}.
+
+Так как $W \ne 0$ (в~противном случае $z = 0$, а~мы условились не рассматривать
+этот случай, ввиду того, что при $z = 0$ уравнение $W^{n} = 0$ имеет единственный
+$n$-кратный корень $W = 0$), то его можно представить в~тригонометрической форме
+$W = \rho (\cos \alpha + i\sin \alpha)$ и~$z = r(\cos \phi + i \sin \phi)$.
+Тогда уравнение \eqref{eq:7_1_12} примет вид
+
+\begin{equation}\label{eq:7_1_13}
+\rho^{n} = (\cos n\alpha + i\sin n\alpha) = r(\cos n\phi + i\sin n\phi) 
+\end{equation}
+
+\noindent
+Комплексные числа, заданные в~тригонометрической форме равны, если равны их модули,
+а~аргументы отличаются на $2\pi k$, где $k$ "--- произвольное целое число.
+Поэтому $\rho^{n} = r$ и~$n\alpha = \phi + 2\pi k$, откуда
+$\rho = \sqrt[\scriptstyle n]{z} = \sqrt[\scriptstyle n]{|z|}$ и~$\alpha = \dfrac{\phi + 2\pi k}{n}$
+(здесь $\sqrt[\scriptstyle n]{r}$ "--- арифметический корень из положительного числа $r$).
+Обозначим $k$-й корень $n$-й степени из комплексного числа $z$ через
+$\left( \sqrt[\scriptstyle n]{z}\right)_{k}$.
+
+Таким образом,
+
+\begin{equation}\label{eq:7_1_14}
+\left( \sqrt[\scriptstyle n]{z}\right)_{k} =
+\sqrt[\scriptstyle n]{|z|}
+    \left(
+         \cos \dfrac{\phi + 2\pi k}{n} + i \sin \dfrac{\phi + 2\pi k}{n}
+    \right),
+k = 0,\pm 1, \pm 2, \dots
+\end{equation}
+
+Различных корней $n$-й степени из комплексного числа $z \ne 0$ всего $n$ и~они получаются
+по формуле \eqref{eq:7_1_14} при $k = 0, 1, \dots n-1$.
+
+Действительно, разделим $k$ на $n$ с остатком:
+
+\begin{equation*}
+k = nl + p, \; 0 \leqslant p \leqslant n - 1.
+\end{equation*}
+
+Тогда аргумент в~формуле \eqref{eq:7_1_14}
+$\dfrac{\phi + 2\pi k}{n} = \dfrac{\phi}{n} + \dfrac{2\pi n}{n} + 2\pi l$
+при $k = 0, 1, \dots n-1$ принимает $n$ значений. Эти значения различны,
+так как в~этом случае $l = 0$, $k = p$ и~для любых двух целых чисел $p_{1}$ и~$p_{2}$,
+
+\begin{equation}\label{eq:7_1_15}
+0 \leqslant p_{1} < p_{2} \leqslant n - 1
+\end{equation}
+
+\noindent
+разность соответствующих значений аргумента равна
+
+\begin{equation*}
+\left( \dfrac{\phi}{n} + \dfrac{2\pi p_{2}}{n} \right) -
+\left( \dfrac{\phi}{n} + \dfrac{2\pi p_{1}}{n} \right) =
+2\pi (p_{2} - p_{1}).
+\end{equation*}
+
+\noindent
+Учитывая неравенства \eqref{eq:7_1_15}, получаем:
+
+\begin{equation*}
+0 < \dfrac{2\pi}{n} (p_{2} - p_{1}) \leqslant \dfrac{2\pi (n-1)}{n} < 2\pi,
+\end{equation*}
+
+\noindent
+т.е.\ данная разность не кратна $2\pi$. Для остальных целых $k$ ($k < 0$ или $k > n - 1$)
+имеем $k = nl + p$, $0 \leqslant p \leqslant n - 1$
+и~$\dfrac{\phi + 2\pi k}{n} - \dfrac{\phi + 2\pi k}{n} = 2\pi l$, поэтому значение корня
+$\left( \sqrt[\scriptstyle n]{z} \right)_{k}$ совпадает со значением
+$\left( \sqrt[\scriptstyle n]{z} \right)p$ , где $p = 0, 1, \dots, n - 1$.
+
+Итак, существует $n$ различных корней $n$-й степени из комплексного числа $z \ne 0$,
+которые даются формулой \eqref{eq:7_1_14} при $k = 0, 1, \dots, n - 1$.
+
+Рассмотрим частный случай $z = 1$. При этом равенство \eqref{eq:7_1_18}
+запишется в~виде:
+
+\begin{equation}\label{eq:7_1_16}
+\left( \sqrt[\scriptstyle n]{1} \right)_{k} = 
+\cos \dfrac{2\pi k}{n} + i \sin \dfrac{2\pi k}{n}
+\end{equation}
+
+\noindent
+Пусть $\epsilon_{k} = \cos \dfrac{2\pi}{n} + i \sin{2\pi}{n}$.
+Тогда по формуле Муавра
+
+\begin{equation}\label{eq:7_1_17}
+\left( \sqrt[\scriptstyle n]{1} \right)_{k} = 
+\cos \dfrac{2\pi k}{n} + i \sin \dfrac{2\pi k}{n} =
+\epsilon^{k}
+\end{equation}
+
+\noindent
+или, в~показательной форме
+
+\begin{equation}\label{eq:7_1_18}
+\left( \sqrt[\scriptstyle n]{1} \right)_{k} = e^{\frac{2\pi i k}{n}}.
+\end{equation}
+
+Из формулы \eqref{eq:7_1_16} следует, что все корни $n$-й степени из 1 расположены
+в~вершинах правильного $n$-угольника, вписанного в~окружность единичного радиуса
+с~центром в~начале координат, одна из вершин которого $\epsilon^{0}$ совпадает
+с~единицей.
+
+Найдём все корни 3-й степени из 1, используя формулу \eqref{eq:7_1_17}:
+
+\begin{gather*}
+\left( \sqrt[\scriptstyle 3]{1} \right)_{0} = \epsilon^{0} = 1, \\
+\left( \sqrt[\scriptstyle 3]{1} \right)_{1} = \epsilon
+= \cos \dfrac{2\pi}{3} + i\sin \dfrac{2\pi}{3}
+= -\dfrac{1}{2} + \dfrac{i\sqrt{3}}{2}, \\
+\left( \sqrt[\scriptstyle 3]{1} \right)_{2} = \epsilon^{2}
+= \cos \dfrac{4\pi}{3} + i\sin \dfrac{4\pi}{3}
+= -\dfrac{1}{2} - \dfrac{i\sqrt{3}}{2}.
+\end{gather*}
+
+Эти корни образуют вершины правильного треугольника (\ref{fig:7_1_7}).
+
+\begin{figure}\label{fig:7_1_7}
+% стр 241 рис 7
+\end{figure}
+
+\noindent
+В~дальнейшем будем также пользоваться обозначением
+$\left( \sqrt[n]{1} \right)_{K} = \epsilon_{nk}$ или для фиксированного $n$ просто
+$\epsilon_{k}$, $k = 0, 1, \dots, n-1$.
+
+Многоугольники, вершины которых совпадают с~корнями из 1~степени 4 и~6 приведены
+на рис. \ref{fig:7_1_8} и~рис.\ \ref{fig:7_1_9} соответственно.
+
+\begin{figure}\label{fig:7_1_8}
+% стр 241 рис 8
+\end{figure}
+
+\begin{figure}\label{fig:7_1_9}
+% стр 241 рис 9
+\end{figure}
+
+Обозначим $\left( \sqrt[\scriptstyle n]{z} \right)_{0}$ через $W_{0}$.
+Тогда из равенств \eqref{eq:7_1_14}-\eqref{eq:7_1_17} вытекает, что
+
+\begin{equation*}
+\left( \sqrt[\scriptstyle n]{z} \right)_{k} = W_{0} \cdot \epsilon^{k}, 
+\end{equation*}
+
+\noindent
+где $k = 0, 1, \dots, n-1$.
+
+Отсюда ясно, что все корни $n$-й степени из $z$ являются вершинами правильного
+$n$-угольника, вписанного в~окружность радиуса $r = \sqrt[\scriptstyle n]{|z|}$
+с~центром в~начале координат, одна из вершин которого лежит в~точке $W_{0}$.
+
+
+\subsection{Применение комплексных чисел к решению задач.}
+Приведём пару примеров, иллюстрирующих применение комплексных чисел к~решению
+некоторых задач.
+
+\textbf{Задача 2.} Найти сумму $p$-х степеней корней $n$-й степеней из 1.
+Так как
+
+\begin{gather*}
+\left( \sqrt[\scriptstyle n]{1}\right)_{k} = \epsilon_{k} = e^{\frac{2\pi i k}{n}}, \\
+\sum\limits^{n-1}_{k=0} \epsilon^{p}_{k} = 
+  \epsilon^{p}_{0} + \epsilon^{p}_{1} + \dots + \epsilon^{p}_{n-1}, \quad \text{то} \\
+\sum\limits^{n-1}_{k=0} \epsilon^{p}_{k} = \sum\limits^{n-1}_{k=0}e^{\frac{2\pi i k p}{n}}.
+\end{gather*}
+
+Рассмотрим два случая:\\
+1) $p$ кратно $n$, т.е.\ $p = ln$ где $l$-целое число. Тогда $k$-е слагаемое в~рассматриваемой
+сумме равно $e^{\frac{2\pi i k ln}{n}} = e^{2\pi i k l} = 1$.
+Поэтому вся сумма равна $n$.\\
+2) $p$ не кратно $n$. В~этом случае искомая сумма представляет собой геометрическую прогрессию
+со знаменателей $e^{2\pi i p}$. Используя формулу суммы членов геометрической прогрессии,
+получим:
+
+\begin{equation*}
+\sum\limits^{n-1}_{k=0} e^{\frac{2\pi i k p}{n}} =
+  \dfrac{1\left( e^{2\pi i p} - 1 \right)}{e^{\frac{2\pi i p}{n}} - 1} = 0,
+\end{equation*}
+
+\noindent
+так как знаменатель дроби отличен от нуля.
+
+Окончательно
+
+\begin{equation*}
+\sum\limits^{n-1}_{k=0} \epsilon^{p}_{k} = 
+\begin{cases}
+n ,& \text{если} \; $p$ \; \text{кратно} \; $n$, \\
+0 ,& \text{если} \; $p$ \; \text{не кратно} \; $n$.
+\end{cases}
+\end{equation*}
+
+\textbf{Задача 3.}\label{ex:7_1_3} Найти суммы
+
+\begin{gather*}
+\sum\limits^{n}_{k=0} \cos kl = 1 + \cos \alpha + \dots + \cos n\alpha, \\
+\sum\limits^{n}_{k=0} \sin kl = \sin \alpha + \sin 2\alpha + \dots + \sin n\alpha.
+\end{gather*}
+
+Рассмотрим 
+
+\begin{equation*}
+\sum\limits^{n}_{k=0} e^{ik\alpha} =
+1 + e^{i\alpha} + e^{i2\alpha} + \dots + e^{in\alpha} =
+1 + e^{i\alpha} + \left( e^{i\alpha} \right)^{2} + \dots + \left( e^{i\alpha} \right)^{n}.
+\end{equation*}
+
+По формуле суммы членов геометрической прогрессии получаем
+
+\begin{multline*}
+\sum\limits^{n}_{k=0} e^{ik\alpha} =
+\dfrac{\left( e^{i\alpha} \right)^{n+1} - 1}{e^{i\alpha} - 1} =
+\dfrac{e^{i(n+1)\alpha} - e^{0}}{e^{i\alpha} - e^{0}} = \\
+= \dfrac
+    {e^{\frac{i(n+1)\alpha}{2}}
+        \left( e^{\frac{i(n+1)\alpha}{2}} - e^{\frac{-i(n-1)\alpha}{2}} \right)}
+    {e^{\frac{i\alpha}{2}} \left( e^{\frac{i\alpha}{2}} - e^{\frac{-i\alpha}{2}} \right)} = \\
+= \dfrac
+    {e^{\frac{in\alpha}{2}} \left( e^{\frac{i(n+1)\alpha}{2}} - e^{\frac{-i(n+1)\alpha}{2}} \right)}
+    {e^{\frac{i\alpha}{2}} - e^{\frac{-i\alpha}{2}}},
+\end{multline*}
+
+\noindent
+откуда, учитывая что $\sin x = \dfrac{e^{ix} - e^{-ix}}{2}$, получим:
+
+\begin{equation*}
+\sum\limits^{n}_{k=0} e^{ik\alpha} = 
+\sum\limits^{n}_{k=0} \left( \cos k\alpha + i \sin k\alpha \right) =
+\dfrac{\left( \cos \dfrac{n\alpha}{2} + i\sin \dfrac{n\alpha}{2} \right) \sin \dfrac{n+1}{2}\alpha}{\sin \dfrac{\alpha}{2}}
+\end{equation*}
+
+Приравнивая действительные и мнимые части, находим:
+
+\begin{gather*}
+\sum\limits^{n}_{k=0} \cos k\alpha =
+    \dfrac{ \cos\dfrac{n\alpha}{2} \sin\dfrac{n+1}{2}\alpha }{ \sin \dfrac{\alpha}{2}}, \\
+\sum\limits^{n}_{k=0} \sin k\alpha =
+    \dfrac{ \sin\dfrac{n\alpha}{2} \sin\dfrac{n+1}{2}\alpha }{ \sin \dfrac{\alpha}{2} }.
+\end{gather*}
